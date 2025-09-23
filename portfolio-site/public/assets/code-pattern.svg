@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <defs>
+    <style>
+      .t{ fill:#e9eef5; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:18px; opacity:0.08 }
+    </style>
+  </defs>
+  <rect width="240" height="240" fill="none"/>
+  <text class="t" x="20" y="40">&lt;/&gt;</text>
+  <text class="t" x="100" y="30">{ }</text>
+  <text class="t" x="180" y="50">()</text>
+  <text class="t" x="60" y="110">const x = 42;</text>
+  <text class="t" x="140" y="90">async</text>
+  <text class="t" x="30" y="170">def foo():</text>
+  <text class="t" x="150" y="160">return</text>
+  <text class="t" x="80" y="210">SELECT *;</text>
+</svg>
