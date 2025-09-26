@@ -80,7 +80,7 @@ export default function Home() {
           <h3 className="muted">{title}</h3>
           <p>{summary}</p>
           <div className="hero__cta">
-            <a className="btn btn-primary" href="/My_Portfolio/contact">Contact Me</a>
+            <Link className="btn btn-primary" to="/contact">Contact Me</Link>
           </div>
           <div className="hero__icons" aria-label="Primary technologies">
             {techs.map((t) => (
