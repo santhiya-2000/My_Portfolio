@@ -4,7 +4,7 @@ const data = {
   summary:
     'Full-stack and AI engineer with experience across Java backends, Windows API (C++/C#), Ember.js/React frontends, and PostgreSQL/MySQL. Interested in ML-driven features, secure systems, and crafting delightful UIs.',
   hero: {
-    photoUrl: '/assets/profile-placeholder.png',
+    photoUrl: 'assets/san.jpg',
     threeD1: 'https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=1200&auto=format&fit=crop',
     threeD2: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop'
   },

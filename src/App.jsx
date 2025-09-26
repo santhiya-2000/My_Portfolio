@@ -25,6 +25,7 @@ export default function App() {
           <Route path="/activities" element={<Activities />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
       <Footer />

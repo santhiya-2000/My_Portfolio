@@ -71,13 +71,16 @@ export default function Home() {
     <div className="home">
       <div className="hero">
         <div className="hero__text">
+          <div className="profile">
+            <img src={hero.photoUrl} alt={`${name} profile picture`} />
+          </div>
           <h1>
             <span className="accent">Hi, I'm</span> {name}
           </h1>
           <h3 className="muted">{title}</h3>
           <p>{summary}</p>
           <div className="hero__cta">
-            <a className="btn btn-primary" href="/contact">Contact Me</a>
+            <a className="btn btn-primary" href="/My_Portfolio/contact">Contact Me</a>
           </div>
           <div className="hero__icons" aria-label="Primary technologies">
             {techs.map((t) => (
