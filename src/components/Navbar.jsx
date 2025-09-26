@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <header className="nav">
-      <div className="nav__brand">SV</div>
+      <NavLink to="/" className="nav__brand" end>SV</NavLink>
       <nav className="nav__menu">
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/education">Education</NavLink>

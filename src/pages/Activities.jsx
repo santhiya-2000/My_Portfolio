@@ -10,6 +10,8 @@ export default function Activities() {
           <div className="card card--roomy" key={a.title}>
             <div className="card__header">
               <h3>{a.title}</h3>
+            </div>
+            <div className="card__period">
               <span className="muted">{a.period}</span>
             </div>
             <div className="muted activities__org">{a.organization} · {a.location}</div>

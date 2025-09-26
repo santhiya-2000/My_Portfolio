@@ -10,6 +10,8 @@ export default function Projects() {
           <div className="card" key={pr.title}>
             <div className="card__header">
               <h3>{pr.title}</h3>
+            </div>
+            <div className="card__period">
               <span className="muted">{pr.period}</span>
             </div>
             <p>{pr.summary}</p>
@@ -32,6 +34,8 @@ export default function Projects() {
               <div className="card" key={h.title}>
                 <div className="card__header">
                   <h3>{h.title}</h3>
+                </div>
+                <div className="card__period">
                   <span className="muted">{h.period}</span>
                 </div>
                 {h.hackathon && (

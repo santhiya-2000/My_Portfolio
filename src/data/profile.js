@@ -20,7 +20,7 @@ const data = {
     {
       school: 'Western Michigan University',
       location: 'Kalamazoo, Michigan',
-      degree: 'M.S. in Computer Science',
+      degree: 'Master of Science in Computer Science',
       years: 'Expected Dec 2026',
       gpa: '4.00/4.00',
       coursework: [
@@ -34,7 +34,7 @@ const data = {
     {
       school: 'Sri Sairam Engineering College',
       location: 'Chennai, India',
-      degree: 'B.E in Computer Science',
+      degree: 'Bachelors of Engineering in Computer Science',
       years: 'Aug 2017 - Apr 2021',
       gpa: '9.03/10.00',
       coursework: [
@@ -67,6 +67,17 @@ const data = {
     }
   ],
   experience: [
+    {
+      company: 'Data Science & AI Club, Western Michigan University',
+      location: 'Kalamazoo, MI USA',
+      role: 'Research Coordinator',
+      period: 'Jul – Present',
+      points: [
+        'Coordinating student-led research initiatives and reading groups in data science and AI.',
+        'Organizing talks, workshops, and collaborations across campus labs and departments.'
+      ],
+      stack: ['Data Science', 'AI', 'Research', 'Academic Coordination']
+    },
     {
       company: 'Zoho - ManageEngine',
       location: 'Chennai, India',

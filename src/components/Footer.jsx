@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__content">
         <div>
-          <strong>Contact:</strong> <a href={`mailto:${email}`}>{email}</a> · <a href={`tel:${phone}`}>{phone}</a>
+          <strong>Contact:</strong> <a href={`mailto:${email}`} className="footer__contact">{email}</a> · <a href={`tel:${phone}`} className="footer__contact">{phone}</a>
         </div>
         <div className="footer__links">
           {links.linkedin && (

@@ -47,6 +47,101 @@ export default function Home() {
             <path fill="#2563eb" d="M46 54c-6 4 2 8 17 8 17 0 29-4 29-8 0-5-10-8-24-8-11 0-19 2-22 8z"/>
           </svg>
         );
+      case 'HTML':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#E34C26"/>
+            <path fill="#EF652A" d="M19 97l9-80h72l9 80H19z"/>
+            <path fill="#EBEBEB" d="M64 36v55l23-6 5-49H64z"/>
+            <path fill="#FFFFFF" d="M64 36H42l-2 20h24V36zm0 27v18l-12-3-1-10h-6l1 15 18 5v-25H64z"/>
+          </svg>
+        );
+      case 'CSS':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#1572B6"/>
+            <path fill="#33A9DC" d="M23 97l9-80h64l9 80H23z"/>
+            <path fill="#FFFFFF" d="M64 36v55l20-5 4-50H64zm0 27v18l-10-2-1-11h-5l1 16 15 4v-25H64z"/>
+          </svg>
+        );
+      case 'Git':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#F05032"/>
+            <path fill="#FFFFFF" d="M64 28l-6 6 12 12-12 12 6 6 18-18-18-18zm-12 12l-12 12 12 12 6-6-12-12 6-6zm24 24l-6 6 12 12-12 12 6 6 18-18-18-18zm-12 12l-18 18 18 18 6-6-12-12 12-12-6-6z"/>
+          </svg>
+        );
+      case 'AWS':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#FF9900"/>
+            <path fill="#FFFFFF" d="M64 32c-18 0-32 14-32 32s14 32 32 32 32-14 32-32-14-32-32-32zm0 58c-14 0-26-12-26-26s12-26 26-26 26 12 26 26-12 26-26 26z"/>
+            <path fill="#FFFFFF" d="M58 54h12v8H58v-8zm0 12h12v8H58v-8z"/>
+          </svg>
+        );
+      case 'VSCode':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#007ACC"/>
+            <path fill="#FFFFFF" d="M28 36l24 24-24 24-8-8 16-16-16-16 8-8zm72 0l8 8-16 16 16 16-8 8-24-24 24-24z"/>
+          </svg>
+        );
+      case 'Firebase':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#FFCA28"/>
+            <path fill="#FFA000" d="M64 28l-8 16-8-16 8-8 8 8zm-24 8l-8 16 16-8-8-8zm48 0l-8 8 16 8-8-16z"/>
+          </svg>
+        );
+      case 'MongoDB':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#47A248"/>
+            <path fill="#FFFFFF" d="M64 28c-8 0-16 8-16 16s8 16 16 16 16-8 16-16-8-16-16-16zm0 24c-4 0-8-4-8-8s4-8 8-8 8 4 8 8-4 8-8 8z"/>
+          </svg>
+        );
+      case 'MySQL':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#4479A1"/>
+            <path fill="#FFFFFF" d="M64 32c-12 0-22 10-22 22s10 22 22 22 22-10 22-22-10-22-22-22zm0 36c-8 0-14-6-14-14s6-14 14-14 14 6 14 14-6 14-14 14z"/>
+          </svg>
+        );
+      case 'PostgreSQL':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#336791"/>
+            <path fill="#FFFFFF" d="M64 28c-14 0-26 12-26 26s12 26 26 26 26-12 26-26-12-26-26-26zm0 44c-10 0-18-8-18-18s8-18 18-18 18 8 18 18-8 18-18 18z"/>
+          </svg>
+        );
+      case 'C':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#00599C"/>
+            <path fill="#FFFFFF" d="M64 32c-12 0-22 10-22 22s10 22 22 22 22-10 22-22-10-22-22-22zm0 36c-8 0-14-6-14-14s6-14 14-14 14 6 14 14-6 14-14 14z"/>
+          </svg>
+        );
+      case 'C++':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#00599C"/>
+            <path fill="#FFFFFF" d="M64 28c-14 0-26 12-26 26s12 26 26 26 26-12 26-26-12-26-26-26zm0 44c-10 0-18-8-18-18s8-18 18-18 18 8 18 18-8 18-18 18z"/>
+          </svg>
+        );
+      case 'C#':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#239120"/>
+            <path fill="#FFFFFF" d="M64 32c-12 0-22 10-22 22s10 22 22 22 22-10 22-22-10-22-22-22zm0 36c-8 0-14-6-14-14s6-14 14-14 14 6 14 14-6 14-14 14z"/>
+          </svg>
+        );
+      case 'R':
+        return (
+          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
+            <rect width="128" height="128" rx="16" fill="#276DC3"/>
+            <path fill="#FFFFFF" d="M64 28c-14 0-26 12-26 26s12 26 26 26 26-12 26-26-12-26-26-26zm0 44c-10 0-18-8-18-18s8-18 18-18 18 8 18 18-8 18-18 18z"/>
+          </svg>
+        );
       default:
         // Generic initial-based icon
         const initials = name
@@ -71,9 +166,6 @@ export default function Home() {
     <div className="home">
       <div className="hero">
         <div className="hero__text">
-          <div className="profile">
-            <img src={hero.photoUrl} alt={`${name} profile picture`} />
-          </div>
           <h1>
             <span className="accent">Hi, I'm</span> {name}
           </h1>
@@ -89,6 +181,11 @@ export default function Home() {
                 <span>{t}</span>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="hero__image">
+          <div className="profile">
+            <img src={hero.photoUrl} alt={`${name} profile picture`} />
           </div>
         </div>
       </div>
