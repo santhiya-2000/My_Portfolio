@@ -172,27 +172,27 @@ const data = {
     }
   ],
   certifications: [
-    { title: 'Advanced Styling with Responsive Design', file: '/certifications/Advanced Styling with Responsive Design.pdf' },
+    { title: 'Advanced Styling with Responsive Design', file: '/My_Portfolio/certifications/Advanced Styling with Responsive Design.pdf' },
     { title: 'Android App', file: '/certifications/Android APP.pdf' },
-    { title: 'Chatbot with Rasa and Python', file: '/certifications/Chatbot with Rasa and Python.pdf' },
-    { title: 'Cloud Computing', file: '/certifications/Cloud_Computing.pdf' },
-    { title: 'Data Analysis with Python', file: '/certifications/Data Analysis with Python.pdf' },
-    { title: 'Data Visualization with Python', file: '/certifications/Data Visualization with python.pdf' },
-    { title: 'Foundational Artificial Intelligence', file: '/certifications/Foundational Artificial Intelligence.pdf' },
-    { title: 'Git', file: '/certifications/Git.pdf' },
-    { title: 'HTML & CSS', file: '/certifications/HTML&CSS.pdf' },
-    { title: 'Interactivity with JavaScript', file: '/certifications/Interactivity with JavaScript.pdf' },
-    { title: 'Introduction to Big Data', file: '/certifications/Introduction to Big Data.pdf' },
-    { title: 'Introduction to CSS3', file: '/certifications/Introduction to CSS3.pdf' },
-    { title: 'Introduction to HTML5', file: '/certifications/Introduction to HTML5.pdf' },
-    { title: 'Machine Learning for All', file: '/certifications/Machine Learning for all.pdf' },
-    { title: 'Python Data Structure', file: '/certifications/Python Data Structure.pdf' },
-    { title: 'Python for Data Science', file: '/certifications/Python for Datascience.pdf' },
-    { title: 'Python', file: '/certifications/Python.pdf' },
-    { title: 'HackerRank Problem Solving (Santhiya.V)', file: '/certifications/Santhiya.V Problem Solving - Hackerrank.pdf' },
-    { title: 'HackerRank Programming in Python (Santhiya.V)', file: '/certifications/Santhiya.V Programming in Python - Hackerrank.pdf' },
-    { title: 'Security', file: '/certifications/Security.pdf' },
-    { title: 'The Sustainable Development Goals', file: '/certifications/The Sustainable Development Goals.pdf' }
+    { title: 'Chatbot with Rasa and Python', file: '/My_Portfolio/certifications/Chatbot with Rasa and Python.pdf' },
+    { title: 'Cloud Computing', file: '/My_Portfolio/certifications/Cloud_Computing.pdf' },
+    { title: 'Data Analysis with Python', file: '/My_Portfolio/certifications/Data Analysis with Python.pdf' },
+    { title: 'Data Visualization with Python', file: '/My_Portfolio/certifications/Data Visualization with python.pdf' },
+    { title: 'Foundational Artificial Intelligence', file: '/My_Portfolio/certifications/Foundational Artificial Intelligence.pdf' },
+    { title: 'Git', file: '/My_Portfolio/certifications/Git.pdf' },
+    { title: 'HTML & CSS', file: '/My_Portfolio/certifications/HTML&CSS.pdf' },
+    { title: 'Interactivity with JavaScript', file: '/My_Portfolio/certifications/Interactivity with JavaScript.pdf' },
+    { title: 'Introduction to Big Data', file: '/My_Portfolio/certifications/Introduction to Big Data.pdf' },
+    { title: 'Introduction to CSS3', file: '/My_Portfolio/certifications/Introduction to CSS3.pdf' },
+    { title: 'Introduction to HTML5', file: '/My_Portfolio/certifications/Introduction to HTML5.pdf' },
+    { title: 'Machine Learning for All', file: '/My_Portfolio/certifications/Machine Learning for all.pdf' },
+    { title: 'Python Data Structure', file: '/My_Portfolio/certifications/Python Data Structure.pdf' },
+    { title: 'Python for Data Science', file: '/My_Portfolio/certifications/Python for Datascience.pdf' },
+    { title: 'Python', file: '/My_Portfolio/certifications/Python.pdf' },
+    { title: 'HackerRank Problem Solving (Santhiya.V)', file: '/My_Portfolio/certifications/Santhiya.V Problem Solving - Hackerrank.pdf' },
+    { title: 'HackerRank Programming in Python (Santhiya.V)', file: '/My_Portfolio/certifications/Santhiya.V Programming in Python - Hackerrank.pdf' },
+    { title: 'Security', file: '/My_Portfolio/certifications/Security.pdf' },
+    { title: 'The Sustainable Development Goals', file: '/My_Portfolio/certifications/The Sustainable Development Goals.pdf' }
   ],
   activities: [
     {
@@ -224,6 +224,113 @@ const data = {
         'Led a national-level hackathon with 100+ participants.',
         'Coordinated the event and headed the Debugging Competition.'
       ]
+    }
+  ],
+  certifications: [
+    {
+      title: 'Advanced Styling with Responsive Design',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Advanced Styling with Responsive Design.pdf'
+    },
+    {
+      title: 'Android App Development',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Android APP.pdf'
+    },
+    {
+      title: 'Chatbot with Rasa and Python',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Chatbot with Rasa and Python.pdf'
+    },
+    {
+      title: 'Cloud Computing',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Cloud_Computing.pdf'
+    },
+    {
+      title: 'Data Analysis with Python',
+      issuer: 'IBM',
+      file: '/My_Portfolio/certifications/Data Analysis with Python.pdf'
+    },
+    {
+      title: 'Data Visualization with Python',
+      issuer: 'IBM',
+      file: '/My_Portfolio/certifications/Data Visualization with python.pdf'
+    },
+    {
+      title: 'Foundational Artificial Intelligence',
+      issuer: 'IBM',
+      file: '/My_Portfolio/certifications/Foundational Artificial Intelligence.pdf'
+    },
+    {
+      title: 'Git',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Git.pdf'
+    },
+    {
+      title: 'HTML & CSS',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/HTML&CSS.pdf'
+    },
+    {
+      title: 'Interactivity with JavaScript',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Interactivity with JavaScript.pdf'
+    },
+    {
+      title: 'Introduction to Big Data',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Introduction to Big Data.pdf'
+    },
+    {
+      title: 'Introduction to CSS3',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Introduction to CSS3.pdf'
+    },
+    {
+      title: 'Introduction to HTML5',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Introduction to HTML5.pdf'
+    },
+    {
+      title: 'Machine Learning for All',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Machine Learning for all.pdf'
+    },
+    {
+      title: 'Python Data Structure',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Python Data Structure.pdf'
+    },
+    {
+      title: 'Python for Data Science',
+      issuer: 'IBM',
+      file: '/My_Portfolio/certifications/Python for Datascience.pdf'
+    },
+    {
+      title: 'Python Programming',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Python.pdf'
+    },
+    {
+      title: 'Problem Solving (Basic)',
+      issuer: 'HackerRank',
+      file: '/My_Portfolio/certifications/Santhiya.V Problem Solving - Hackerrank.pdf'
+    },
+    {
+      title: 'Programming in Python',
+      issuer: 'HackerRank',
+      file: '/My_Portfolio/certifications/Santhiya.V Programming in Python - Hackerrank.pdf'
+    },
+    {
+      title: 'Security',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/Security.pdf'
+    },
+    {
+      title: 'The Sustainable Development Goals',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/The Sustainable Development Goals.pdf'
     }
   ],
   skills: {
