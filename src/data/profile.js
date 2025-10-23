@@ -28,7 +28,10 @@ const data = {
         'Cryptography',
         'Data Mining',
         'Machine Learning',
-        'Computer Organization & Programming'
+        'Computer Organization & Programming',
+        'Generative AI',
+        'Big Data',
+        'Data Science'
       ]
     },
     {
@@ -68,27 +71,21 @@ const data = {
   ],
   experience: [
     {
-      company: 'Data Science & AI Club, Western Michigan University',
-      location: 'Kalamazoo, MI USA',
-      role: 'Research Coordinator',
-      period: 'Jul – Present',
-      points: [
-        'Coordinating student-led research initiatives and reading groups in data science and AI.',
-        'Organizing talks, workshops, and collaborations across campus labs and departments.'
-      ],
-      stack: ['Data Science', 'AI', 'Research', 'Academic Coordination']
-    },
-    {
       company: 'Zoho - ManageEngine',
       location: 'Chennai, India',
       role: 'Full Stack Development Engineer - Member Technical Staff',
       period: 'Jan 2022 – Apr 2025',
       points: [
-        'Built and enhanced DataSecurity Plus to improve data visibility and security.',
-        'Implemented new features and customer-requested enhancements, improving usability and functionality.',
-        'Collaborated across Java backend, Windows API (C++/C#), Ember.js frontend, and PostgreSQL. '
+        'Led the development of Nutanix NAS support for DataSecurity Plus, enabling comprehensive file auditing and access control for Nutanix storage environments.',
+        'Implemented critical security fixes and vulnerability patches across the application stack, significantly improving system security and stability.',
+        'Spearheaded UI/UX revamps for multiple modules, enhancing user experience and interface consistency.',
+        'Developed and optimized core features for data visibility and security, including real-time monitoring and alerting systems.'
       ],
-      stack: ['Java', 'C++', 'C#', 'Ember.js', 'JavaScript', 'PostgreSQL']
+      stack: [
+        'Java', 'C++', 'C#', 'Ember.js', 'JavaScript', 'PostgreSQL',
+        'Nutanix API', 'NAS', 'Security Hardening', 'UI/UX Design',
+        'Performance Optimization', 'Cross-platform Development'
+      ]
     },
     {
       company: 'ZoomRx HealthCare Pvt. Ltd.',
@@ -135,29 +132,152 @@ const data = {
         'Strengthened problem solving and HTML skills.'
       ],
       stack: ['Android Studio', 'Java', 'HTML']
+    },
+    {
+      company: 'Western Michigan University',
+      location: 'Kalamazoo, MI, USA',
+      role: 'Research Coordinator - Data Science & AI Club',
+      period: 'Aug 2025 – Present',
+      points: [
+        'Leading research initiatives and coordinating student projects in data science and artificial intelligence.',
+        'Organizing workshops, seminars, and collaborative research sessions with faculty and industry professionals.',
+        'Mentoring student researchers and facilitating knowledge sharing across different departments.'
+      ],
+      stack: ['Research Coordination', 'Data Science', 'AI/ML', 'Project Management', 'Mentorship']
+    },
+    {
+      company: 'Western Michigan University',
+      location: 'Kalamazoo, MI, USA',
+      role: 'Project Lead - Data Science & AI Club',
+      period: 'Aug 2025 – Present',
+      points: [
+        'Leading a team of students in developing data science projects with real-world applications.',
+        'Managing project timelines, deliverables, and stakeholder communications.',
+        'Implementing agile methodologies to ensure efficient project execution and team collaboration.'
+      ],
+      stack: ['Project Management', 'Team Leadership', 'Agile Methodologies', 'Data Analysis', 'Python', 'Machine Learning']
+    },
+    {
+      company: 'Western Michigan University',
+      location: 'Kalamazoo, MI, USA',
+      role: 'Student Manager - Retail Operations',
+      period: 'Aug 2025 – Present',
+      points: [
+        'Overseeing daily retail operations and managing a team of student employees.',
+        'Implementing inventory management systems to optimize stock levels and reduce waste.',
+        'Training new staff and ensuring excellent customer service standards are maintained.'
+      ],
+      stack: ['Retail Management', 'Team Leadership', 'Inventory Management', 'Customer Service', 'Operations']
     }
   ],
   projects: [
     {
-      title: 'Optimisation of Feature Selection for Classification of SLE',
-      period: 'Dec 2019 - Apr 2020',
-      summary:
-        'Selected vital features to diagnose SLE using Wrapper methods and PCA for dimensionality reduction and improved classification.',
-      stack: ['Python', 'PCA', 'Feature Selection']
+      title: 'Personal Portfolio',
+      period: '2024',
+      summary: 'A responsive portfolio website built with React, showcasing my projects, skills, and experience. Features a clean, modern design with dark/light mode support.',
+      stack: [
+        'React', 'JavaScript', 'CSS3', 'HTML5', 'Vite',
+        'Responsive Design', 'Git', 'GitHub Pages',
+        'UI/UX Design', 'React Router'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/My_Portfolio'
+      }
     },
     {
-      title: '3D ToDo Application',
-      period: 'May 2025 - June 2025',
-      summary:
-        'A 3D-inspired Todo web application with journaling and reminders using React, MongoDB, and Java.',
-      stack: ['React', 'MongoDB', 'Java']
+      title: 'Revit Copilot AI',
+      period: '2024 - Present',
+      summary: 'Revit-integrated AI copilot that understands natural language prompts and automates modeling tasks through Revit scripting. Enables architects and engineers to create and modify 3D models using conversational AI.',
+      stack: [
+        'Python', 'Revit API', 'PyRevit', 'Natural Language Processing (NLP)', 
+        'Machine Learning', 'Transformers', 'PyTorch', 'REST APIs', 'Dynamo',
+        'Automation Scripting', '3D Modeling', 'BIM (Building Information Modeling)'
+      ],
+      links: {}
+    },
+    {
+      title: 'Optimisation of Feature Selection for Classification of SLE',
+      period: 'Dec 2019 - Apr 2020',
+      summary: 'Selected vital features to diagnose SLE using Wrapper methods and PCA for dimensionality reduction and improved classification.',
+      stack: [
+        'Python', 'Scikit-learn', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn',
+        'Principal Component Analysis (PCA)', 'Feature Engineering', 'Wrapper Methods',
+        'Machine Learning', 'Data Preprocessing', 'Jupyter Notebook', 'Google Colab'
+      ],
+      links: {
+        colab: 'https://colab.research.google.com/drive/1sw8fAioL4oUYTf5YhrXaG6BP8zhI2TDn?usp=sharing'
+      }
     },
     {
       title: 'Mere Estimation of Autistic Spectrum Disorder',
       period: 'Dec 2020 - Apr 2021',
-      summary:
-        'Developed an approach to predict autism early using dimensionality reduction with PCA and Self-Organising Maps (SOM). Performed a comparative evaluation against a CNN-based method and achieved improved prediction accuracy.',
-      stack: ['Python', 'PCA', 'SOM', 'CNN']
+      summary: 'Developed an approach to predict autism early using dimensionality reduction with PCA and Self-Organising Maps (SOM). Performed a comparative evaluation against a CNN-based method and achieved improved prediction accuracy.',
+      stack: [
+        'Python', 'TensorFlow', 'Keras', 'Scikit-learn', 'NumPy', 'Pandas',
+        'Self-Organizing Maps (SOM)', 'Convolutional Neural Networks (CNN)',
+        'Principal Component Analysis (PCA)', 'Data Visualization',
+        'Machine Learning', 'Deep Learning', 'Jupyter Notebook', 'Google Colab'
+      ],
+      links: {
+        colab: 'https://colab.research.google.com/drive/1PLxUzIdWJWpznBN0Vbf5_wbAOH1t6p9U?usp=sharing#scrollTo=jDdkrkYMM0yr'
+      }
+    },
+    {
+      title: 'Todo Application',
+      period: '2023',
+      summary: 'A simple and efficient Todo application to manage daily tasks and boost productivity with features like task categorization, due dates, and priority levels.',
+      stack: [
+        'React', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'React Hooks',
+        'Context API', 'Local Storage', 'Responsive Design', 'UI/UX Design',
+        'Git Version Control'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/Todo',
+        demo: 'https://santhiya-2000.github.io/Todo/'
+      }
+    },
+    {
+      title: 'FlightBrief AI',
+      period: '2023',
+      summary: 'Web application that helps sales reps input a flight number and get comprehensive information about frequent routes, flight details, and maintenance history. Features include automated report generation and integration with flight data APIs.',
+      stack: [
+        'Next.js', 'React', 'TypeScript', 'Node.js', 'OpenSky API',
+        'Nebius AI Studio', 'OpenAI API', 'RESTful APIs', 'MongoDB',
+        'Tailwind CSS', 'JWT Authentication', 'Responsive Design'
+      ],
+      links: {
+        github: 'https://github.com/grcodeman/localhost-flightbriefai',
+        demo: 'https://flightbrief-ai.vercel.app/'
+      }
+    },
+    {
+      title: 'Strep Throat Detection',
+      period: '2024 - Present',
+      summary: 'Leading a team in the Data Science & AI club to develop a deep learning model for detecting strep throat from medical images, with the goal of assisting in early diagnosis and reducing unnecessary antibiotic prescriptions.',
+      stack: [
+        'Python', 'TensorFlow', 'Keras', 'OpenCV', 'NumPy', 'Pandas',
+        'Convolutional Neural Networks (CNN)', 'Transfer Learning', 'Data Augmentation',
+        'Medical Image Processing', 'Model Optimization', 'Flask', 'Docker',
+        'MongoDB', 'RESTful APIs', 'Team Leadership', 'Agile Methodology'
+      ],
+      links: {
+        github: 'https://github.com/your-username/strep-throat-detection',
+        paper: '#'
+      }
+    },
+    {
+      title: 'Contact Management System',
+      period: '2023',
+      summary: 'Implemented a comprehensive Contact Management System in C that demonstrates the practical application of various data structures including Array, Linked List, Hash Map, Binary Search Tree (BST), and AVL Tree, complete with performance benchmarking and visualization.',
+      stack: [
+        'C', 'Data Structures', 'Algorithms', 'Memory Management', 'Pointers',
+        'File I/O', 'Makefile', 'Git Version Control', 'Unit Testing',
+        'Performance Benchmarking', 'Time Complexity Analysis', 'Space Complexity Analysis'
+      ],
+      links: {
+        github: 'https://github.com/akgWMU/pa3-datastructs-contact-management-system-f25cs5115-santhiya-2000',
+        documentation: '#'
+      }
     }
   ],
   hackathons: [
@@ -235,6 +355,31 @@ const data = {
         'Led a national-level hackathon with 100+ participants.',
         'Coordinated the event and headed the Debugging Competition.'
       ]
+    }
+  ],
+  awards: [
+    {
+      title: 'Leo Muthu Scholarship Award',
+      issuer: 'Sri Sairam Engineering College',
+      date: 'Sep 2019',
+      description: 'Awarded for outstanding academic performance and leadership qualities.'
+    },
+    {
+      title: 'Intra College Coding Contest',
+      issuer: 'Association of Computer Science Engineers',
+      date: 'Jul 2019',
+      description: 'Achieved top ranks in the college-level coding competition.'
+    },
+    {
+      title: 'Paper Presentation on Bluebrain Technology',
+      issuer: 'Meenakshi Sundararajan Engineering College',
+      date: 'Sep 2018',
+      description: 'Runner up in the technical paper presentation competition.'
+    },
+    {
+      title: 'National Level Hackathon',
+      issuer: 'Meenakshi College of Engineering',
+      description: 'Won the Best Team Award in the national level hackathon.'
     }
   ],
   certifications: [
@@ -346,6 +491,7 @@ const data = {
   ],
   skills: {
     programming: [
+      'Generative AI', 'Big Data', 'Data Science',
       'Java', 'Python', 'JavaScript', 'HTML/CSS', 'SQL', 'Node.js', 'React.js', 'MATLAB', 'R', 'C++', 'C', 'C#', 'Swift (iOS)', 'MongoDB', 'PostgreSQL', 'MySQL'
     ],
     tools: [

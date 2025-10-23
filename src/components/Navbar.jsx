@@ -30,6 +30,7 @@ export default function Navbar() {
         <NavLink to="/projects">Projects</NavLink>
         <NavLink to="/skills">Skills</NavLink>
         <NavLink to="/activities">Activities</NavLink>
+        <NavLink to="/awards">Awards</NavLink>
         <NavLink to="/certifications">Certifications</NavLink>
         <NavLink to="/contact" className="btn btn-primary">Contact</NavLink>
         <button type="button" className="theme-toggle" onClick={toggleTheme} aria-label="Toggle color theme">

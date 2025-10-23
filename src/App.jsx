@@ -10,6 +10,7 @@ import Skills from './pages/Skills.jsx';
 import Activities from './pages/Activities.jsx';
 import Contact from './pages/Contact.jsx';
 import Certifications from './pages/Certifications.jsx';
+import Awards from './pages/Awards.jsx';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/activities" element={<Activities />} />
+          <Route path="/awards" element={<Awards />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
