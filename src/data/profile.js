@@ -200,17 +200,6 @@ const data = {
       }
     },
     {
-      title: 'Revit Copilot AI',
-      period: '2025 - Present',
-      summary: 'Revit-integrated AI copilot that understands natural language prompts and automates modeling tasks through Revit scripting. Enables architects and engineers to create and modify 3D models using conversational AI.',
-      stack: [
-        'Python', 'Revit API', 'PyRevit', 'Natural Language Processing (NLP)', 
-        'Machine Learning', 'Transformers', 'PyTorch', 'REST APIs', 'Dynamo',
-        'Automation Scripting', '3D Modeling', 'BIM (Building Information Modeling)'
-      ],
-      links: {}
-    },
-    {
       title: 'Optimisation of Feature Selection for Classification of SLE',
       period: 'Dec 2019 - Apr 2020',
       summary: 'Selected vital features to diagnose SLE using Wrapper methods and PCA for dimensionality reduction and improved classification.',
