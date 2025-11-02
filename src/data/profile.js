@@ -173,7 +173,7 @@ const data = {
   projects: [
     {
       title: 'Data Structure Visualization',
-      period: '2024',
+      period: '2025',
       summary: 'An interactive web application for visualizing common data structures and algorithms. Helps students and developers understand how data structures work through step-by-step visualizations and animations.',
       stack: [
         'React', 'JavaScript', 'HTML5', 'CSS3', 'D3.js',
@@ -187,7 +187,7 @@ const data = {
     },
     {
       title: 'Personal Portfolio',
-      period: '2024',
+      period: '2025',
       summary: 'A responsive portfolio website built with React, showcasing my projects, skills, and experience. Features a clean, modern design with dark/light mode support.',
       stack: [
         'React', 'JavaScript', 'CSS3', 'HTML5', 'Vite',
@@ -195,12 +195,13 @@ const data = {
         'UI/UX Design', 'React Router'
       ],
       links: {
-        github: 'https://github.com/santhiya-2000/My_Portfolio'
+        github: 'https://github.com/santhiya-2000/My_Portfolio',
+        demo: 'https://santhiya-2000.github.io/My_Portfolio/'
       }
     },
     {
       title: 'Revit Copilot AI',
-      period: '2024 - Present',
+      period: '2025 - Present',
       summary: 'Revit-integrated AI copilot that understands natural language prompts and automates modeling tasks through Revit scripting. Enables architects and engineers to create and modify 3D models using conversational AI.',
       stack: [
         'Python', 'Revit API', 'PyRevit', 'Natural Language Processing (NLP)', 
@@ -238,7 +239,7 @@ const data = {
     },
     {
       title: 'Todo Application',
-      period: '2023',
+      period: '2025',
       summary: 'A simple and efficient Todo application to manage daily tasks and boost productivity with features like task categorization, due dates, and priority levels.',
       stack: [
         'React', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'React Hooks',
@@ -246,13 +247,12 @@ const data = {
         'Git Version Control'
       ],
       links: {
-        github: 'https://github.com/santhiya-2000/Todo',
-        demo: 'https://santhiya-2000.github.io/Todo/'
+        github: 'https://github.com/santhiya-2000/Todo'
       }
     },
     {
       title: 'FlightBrief AI',
-      period: '2023',
+      period: '2025',
       summary: 'Web application that helps sales reps input a flight number and get comprehensive information about frequent routes, flight details, and maintenance history. Features include automated report generation and integration with flight data APIs.',
       stack: [
         'Next.js', 'React', 'TypeScript', 'Node.js', 'OpenSky API',
@@ -260,13 +260,12 @@ const data = {
         'Tailwind CSS', 'JWT Authentication', 'Responsive Design'
       ],
       links: {
-        github: 'https://github.com/grcodeman/localhost-flightbriefai',
-        demo: 'https://flightbrief-ai.vercel.app/'
+        github: 'https://github.com/grcodeman/localhost-flightbriefai'
       }
     },
     {
       title: 'Strep Throat Detection',
-      period: '2024 - Present',
+      period: '2025 - Present',
       summary: 'Leading a team in the Data Science & AI club to develop a deep learning model for detecting strep throat from medical images, with the goal of assisting in early diagnosis and reducing unnecessary antibiotic prescriptions.',
       stack: [
         'Python', 'TensorFlow', 'Keras', 'OpenCV', 'NumPy', 'Pandas',
