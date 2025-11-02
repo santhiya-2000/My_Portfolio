@@ -172,6 +172,20 @@ const data = {
   ],
   projects: [
     {
+      title: 'Data Structure Visualization',
+      period: '2024',
+      summary: 'An interactive web application for visualizing common data structures and algorithms. Helps students and developers understand how data structures work through step-by-step visualizations and animations.',
+      stack: [
+        'React', 'JavaScript', 'HTML5', 'CSS3', 'D3.js',
+        'Data Structures', 'Algorithms', 'Visualization', 'Responsive Design',
+        'UI/UX Design', 'Git', 'GitHub Pages'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/DS_Viz',
+        demo: 'https://santhiya-2000.github.io/DS_Viz/'
+      }
+    },
+    {
       title: 'Personal Portfolio',
       period: '2024',
       summary: 'A responsive portfolio website built with React, showcasing my projects, skills, and experience. Features a clean, modern design with dark/light mode support.',
@@ -267,7 +281,7 @@ const data = {
     },
     {
       title: 'Contact Management System',
-      period: '2023',
+      period: '2025',
       summary: 'Implemented a comprehensive Contact Management System in C that demonstrates the practical application of various data structures including Array, Linked List, Hash Map, Binary Search Tree (BST), and AVL Tree, complete with performance benchmarking and visualization.',
       stack: [
         'C', 'Data Structures', 'Algorithms', 'Memory Management', 'Pointers',
