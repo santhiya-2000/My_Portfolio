@@ -161,16 +161,67 @@ const data = {
       company: 'Western Michigan University',
       location: 'Kalamazoo, MI, USA',
       role: 'Student Manager - Retail Operations',
-      period: 'Aug 2025 – Present',
+      period: 'Jan 2026 – Present',
       points: [
         'Overseeing daily retail operations and managing a team of student employees.',
         'Implementing inventory management systems to optimize stock levels and reduce waste.',
         'Training new staff and ensuring excellent customer service standards are maintained.'
       ],
       stack: ['Retail Management', 'Team Leadership', 'Inventory Management', 'Customer Service', 'Operations']
+    },
+    {
+      company: 'Western Michigan University - Waldo Library Tech Lab',
+      location: 'Kalamazoo, MI, USA',
+      role: 'Student IT Technician',
+      period: 'Jan 2026 – Present',
+      points: [
+        'Support and manage emerging technology systems within the university tech lab, including 3D printing services, VR gaming setups, and flight simulation platforms.',
+        'Assist students and staff with hardware configuration, software troubleshooting, and system optimization.',
+        'Ensure reliable operation of lab equipment while delivering hands-on technical support for academic and experiential learning initiatives.'
+      ],
+      stack: ['Retail Management', 'Team Leadership', 'Inventory Management', 'Customer Service', 'Operations']
     }
   ],
   projects: [
+    {
+      title: 'Factory Intelligence Copilot',
+      period: '2026',
+      summary: 'An AI-driven manufacturing analytics and decision-support platform that combines data engineering, operational analytics, and an intelligent reasoning layer to help manufacturing teams understand performance changes and take action.',
+      stack: [
+        'Python', 'PostgreSQL', 'SQL', 'Streamlit', 'Pandas', 
+        'SQLAlchemy', 'ETL Pipelines', 'Data Modeling', 'AI/ML',
+        'Data Visualization', 'Business Intelligence'
+      ],
+      features: [
+        'End-to-end Python ETL pipelines loading manufacturing data into PostgreSQL',
+        'Star-schema data modeling for production, maintenance, and machine metrics',
+        'Interactive Streamlit dashboard for KPIs (downtime, scrap, cost impact)',
+        'AI Copilot that converts natural-language questions into SQL queries',
+        'Deterministic, explainable insights with optional LLM-based explanations'
+      ],
+      useCases: [
+        'Identify lines or machines driving downtime and cost',
+        'Analyze scrap trends and operational inefficiencies',
+        'Correlate machine health metrics with failure events',
+        'Support Industry 4.0 and smart manufacturing initiatives'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/Factory-Intelligence-Copilot',
+        demo: '#'
+      }
+    },
+    {
+      title: 'StoryIllustrator-AI',
+      period: '2025',
+      summary: 'The project demonstrates a creative, hands-on application of generative AI that bridges language understanding and visual synthesis, highlighting the potential of diffusion models to transform storytelling into an automatically illustrated visual experience. Developed an end-to-end AI pipeline combining NLP and generative models, demonstrating automation of creative workflows using machine learning.',
+      stack: [
+        'Python', 'React.js', 'Stable Diffusion', 'Natural Language Processing (NLP)', 'Generative AI'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/Generative_AI_Project.git',
+        demo: '#'
+      }
+    },
     {
       title: 'Data Structure Visualization',
       period: '2025',
@@ -357,7 +408,18 @@ const data = {
         'Led a national-level hackathon with 100+ participants.',
         'Coordinated the event and headed the Debugging Competition.'
       ]
-    }
+    },
+    {
+      organization: 'Western Michigan University',
+      location: 'Kalamazoo, MI, USA',
+      title: 'Student Manager - Retail Operations',
+      period: 'Jan 2026 – Present',
+      points: [
+        'Overseeing daily retail operations and managing a team of student employees.',
+        'Implementing inventory management systems to optimize stock levels and reduce waste.',
+        'Training new staff and ensuring excellent customer service standards are maintained.'
+      ],
+    },
   ],
   awards: [
     {
