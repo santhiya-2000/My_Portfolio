@@ -170,7 +170,7 @@ export default function Home() {
             <span className="accent">Hi, I'm</span> {name}
           </h1>
           <h3 className="muted">{title}</h3>
-          <p>{summary}</p>
+          <p style={{ textAlign: 'justify' }}>{summary}</p>
           <div className="hero__cta">
             <Link className="btn btn-primary" to="/contact">Contact Me</Link>
           </div>
@@ -193,7 +193,7 @@ export default function Home() {
       <div className="section">
         <div className="section__header">
           <h2>Education</h2>
-          <p className="section__intro">Degrees, GPA, and selected coursework.</p>
+          <p className="section__intro" style={{ textAlign: 'justify' }}>Degrees, GPA, and selected coursework.</p>
         </div>
         <div className="timeline">
           {data.education.map((ed) => (
@@ -221,7 +221,7 @@ export default function Home() {
       <div className="section">
         <div className="section__header">
           <h2>Experience</h2>
-          <p className="section__intro">Highlights from my professional journey.</p>
+          <p className="section__intro" style={{ textAlign: 'justify' }}>Highlights from my professional journey.</p>
         </div>
         {data.experience.slice(0, 3).map((ex) => (
           <div className="card" key={ex.company + ex.role}>
@@ -251,7 +251,7 @@ export default function Home() {
       <div className="section">
         <div className="section__header">
           <h2>Projects</h2>
-          <p className="section__intro">Selected personal and academic work.</p>
+          <p className="section__intro" style={{ textAlign: 'justify' }}>Selected personal and academic work.</p>
         </div>
         <div className="grid grid--spacious">
           {data.projects.slice(0, 4).map((pr) => (
@@ -260,7 +260,7 @@ export default function Home() {
                 <h3>{pr.title}</h3>
                 <span className="muted">{pr.period}</span>
               </div>
-              <p>{pr.summary}</p>
+              <p style={{ textAlign: 'justify' }}>{pr.summary}</p>
               {pr.stack && (
                 <div className="chips">
                   {pr.stack.map((s) => (
@@ -282,7 +282,7 @@ export default function Home() {
                     <span className="muted">{h.period}</span>
                   </div>
                   {h.hackathon && <div className="card__subheader"><strong>{h.hackathon}</strong></div>}
-                  {h.summary && <p>{h.summary}</p>}
+                  {h.summary && <p style={{ textAlign: 'justify' }}>{h.summary}</p>}
                 </div>
               ))}
             </div>
@@ -295,7 +295,7 @@ export default function Home() {
       <div className="section">
         <div className="section__header">
           <h2>Skills</h2>
-          <p className="section__intro">Core programming and tools I use.</p>
+          <p className="section__intro" style={{ textAlign: 'justify' }}>Core programming and tools I use.</p>
         </div>
         <div className="card">
           <h3>Programming</h3>
