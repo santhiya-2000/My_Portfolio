@@ -1,8 +1,8 @@
 const data = {
   name: 'Santhiya Venkatesh',
-  title: 'Full Stack Developer · AI Engineer',
+  title: 'Full Stack Developer · AI Engineer · Data Analyst · Software Engineer',
   summary:
-    'Full-stack and AI engineer with experience across Java backends, Windows API (C++/C#), Ember.js/React frontends, and PostgreSQL/MySQL. Interested in ML-driven features, secure systems, and crafting delightful UIs.',
+    'Full-stack and AI engineer with experience across Java backends, Windows API (C++/C#), Ember.js/React frontends, and PostgreSQL/MySQL. Data analytics enthusiast interested in ML-driven features, secure systems, and crafting delightful UIs.',
   hero: {
     photoUrl: 'assets/san.jpg',
     threeD1: 'https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=1200&auto=format&fit=crop',
@@ -186,27 +186,28 @@ const data = {
     {
       title: 'Factory Intelligence Copilot',
       period: '2026',
-      summary: 'An AI-driven manufacturing analytics and decision-support platform that combines data engineering, operational analytics, and an intelligent reasoning layer to help manufacturing teams understand performance changes and take action.',
+      summary: 'Manufacturing teams often struggle to understand production inefficiencies because data is scattered across different systems like machine logs, maintenance records, and production reports. I built an analytics platform that ingests manufacturing data using a Python ETL pipeline into a PostgreSQL database, structured data using a star-schema model, and created a Streamlit dashboard showing key KPIs like downtime, scrap rate, and cost impact. I also added an AI Copilot that converts natural language questions into SQL queries. The system helps production managers quickly identify bottlenecks, predict machine failures, and make data-driven decisions to reduce waste and improve operational efficiency.',
       stack: [
         'Python', 'PostgreSQL', 'SQL', 'Streamlit', 'Pandas', 
         'SQLAlchemy', 'ETL Pipelines', 'Data Modeling', 'AI/ML',
         'Data Visualization', 'Business Intelligence'
       ],
-      features: [
-        'End-to-end Python ETL pipelines loading manufacturing data into PostgreSQL',
-        'Star-schema data modeling for production, maintenance, and machine metrics',
-        'Interactive Streamlit dashboard for KPIs (downtime, scrap, cost impact)',
-        'AI Copilot that converts natural-language questions into SQL queries',
-        'Deterministic, explainable insights with optional LLM-based explanations'
-      ],
-      useCases: [
-        'Identify lines or machines driving downtime and cost',
-        'Analyze scrap trends and operational inefficiencies',
-        'Correlate machine health metrics with failure events',
-        'Support Industry 4.0 and smart manufacturing initiatives'
-      ],
       links: {
         github: 'https://github.com/santhiya-2000/Factory-Intelligence-Copilot',
+        demo: '#'
+      }
+    },
+    {
+      title: 'SmartComfort (HVAC Optimization)',
+      period: '2025',
+      summary: 'Buildings often waste energy because HVAC systems run on static settings rather than adapting to occupancy patterns and user comfort preferences. I developed a data platform that integrates building sensor data, user survey responses, and energy consumption metrics, then used machine learning models to predict optimal temperature settings and visualize performance through dashboards. The platform helps facilities teams optimize energy usage while maintaining comfort, targeting a 5–10% reduction in energy consumption across campus buildings.',
+      stack: [
+        'Python', 'Machine Learning', 'Data Integration', 'Sensor Data', 
+        'Energy Analytics', 'Predictive Modeling', 'Dashboard Development',
+        'Data Visualization', 'Time Series Analysis'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/SmartComfort-HVAC',
         demo: '#'
       }
     },
@@ -248,6 +249,34 @@ const data = {
       links: {
         github: 'https://github.com/santhiya-2000/My_Portfolio',
         demo: 'https://santhiya-2000.github.io/My_Portfolio/'
+      }
+    },
+    {
+      title: 'Nutanix Dashboard (Zoho – ManageEngine DataSecurity Plus)',
+      period: '2024',
+      summary: 'Administrators managing Nutanix infrastructure lacked a centralized way to monitor system performance, storage utilization, and infrastructure health. I developed a dashboard that collected infrastructure metrics through Nutanix APIs and visualized system performance, capacity usage, and activity trends so administrators could monitor environments from a single interface. The dashboard improved operational visibility and helped administrators detect infrastructure issues faster without manually checking multiple systems.',
+      stack: [
+        'Java', 'JavaScript', 'Nutanix API', 'REST APIs', 'Data Visualization',
+        'Dashboard Development', 'System Monitoring', 'Infrastructure Management',
+        'API Integration', 'Real-time Analytics'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/Nutanix-Dashboard',
+        demo: '#'
+      }
+    },
+    {
+      title: 'Power BI Scheduling Dashboard',
+      period: '2024',
+      summary: 'Different schedulers maintain production schedules in separate Excel spreadsheets with inconsistent formats, making it difficult for managers to understand production plans quickly. I used Power Query to standardize different spreadsheet formats and built a Power BI dashboard that shows total production, workload by line, scheduling trends, and estimated capacity utilization. The dashboard consolidates multiple schedules into a single operational view and can automatically update when Excel files refresh.',
+      stack: [
+        'Power BI', 'Power Query', 'Excel Integration', 'Data Transformation',
+        'Dashboard Development', 'Business Intelligence', 'Data Visualization',
+        'Production Analytics', 'Capacity Planning'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/Power-BI-Scheduling',
+        demo: '#'
       }
     },
     {
