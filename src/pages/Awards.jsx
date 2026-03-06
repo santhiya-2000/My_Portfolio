@@ -66,7 +66,7 @@ export default function Awards() {
           margin: 0 0 0.25rem 0;
           font-size: 1.1rem;
           font-weight: 600;
-          color: var(--heading-color);
+          color: #3b82f6;
         }
         .award-meta {
           display: flex;

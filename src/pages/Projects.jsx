@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Section from '../components/Section.jsx';
 import data from '../data/profile.js';
 
@@ -11,86 +11,132 @@ const GitHubIcon = () => (
 
 const ColabIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M16.941 4.976a7.033 7.033 0 0 0-4.93 2.06 7.033 7.033 0 0 0-.123 9.806l.123.124a1 1 0 0 0 1.414-1.415 5.002 5.002 0 0 1-.117-6.945l.117-.116a5.033 5.033 0 0 1 7.072 0 5.033 5.033 0 0 1 0 7.07 5.033 5.033 0 0 1-7.072 0 1 1 0 0 0-1.414 1.414 7.033 7.033 0 1 0 0-9.962 7.033 7.033 0 0 0-2.12-1.31 1 1 0 1 0-.632 1.898 5.033 5.033 0 0 1 1.515.938 5.033 5.033 0 0 1 0 7.07 5.033 5.033 0 0 1-7.072 0 5.033 5.033 0 0 1 0-7.07 5.033 5.033 0 0 1 5.656-1.06 1 1 0 0 0 .898-1.788 7.033 7.033 0 0 0-9.52 10.24 7.033 7.033 0 0 0 9.945 0 7.033 7.033 0 0 0 0-9.945 7.033 7.033 0 0 0-4.93-2.06z"/>
+    <path d="M16.941 4.976a7.033 7.033 0 0 0-4.93 2.06 7.033 7.033 0 0 0-.123 9.806l.123.124a1 1 0 0 1 1.414-1.415 5.002 5.002 0 0 1-.117-6.945l.117-.116a5.033 5.033 0 0 1 7.072 0 5.033 5.033 0 0 1 0 7.07 5.033 5.033 0 0 1-7.072 0 1 1 0 0 0-1.414 1.414 7.033 7.033 0 1 0 0-9.962 7.033 7.033 0 0 0-2.12-1.31 1 1 0 1 0-.632 1.898 5.033 5.033 0 0 1 1.515.938 5.033 5.033 0 0 1 0 7.07 5.033 5.033 0 0 1-7.072 0 5.033 5.033 0 0 1 0-7.07 5.033 5.033 0 0 1 5.656-1.06 1 1 0 0 0 .898-1.788 7.033 7.033 0 0 0-9.52 10.24 7.033 7.033 0 0 0 9.945 0 7.033 7.033 0 0 0 0-9.945 7.033 7.033 0 0 0-4.93-2.06z"/>
   </svg>
 );
 
 export default function Projects() {
+  const [expandedCards, setExpandedCards] = useState({});
+
+  const toggleExpanded = (title) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [title]: !prev[title]
+    }));
+  };
+
+  const truncateText = (text, maxLength = 150) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + '...';
+  };
+
   return (
     <Section title="Projects" intro="Selected personal and academic projects.">
       <div className="grid grid--spacious">
-        {data.projects.map((pr) => (
-          <div className="card" key={pr.title}>
-            <div className="card__header">
-              <h3>{pr.title}</h3>
-            </div>
-            <div className="card__period">
-              <span className="muted">{pr.period}</span>
-            </div>
-            <p>{pr.summary}</p>
-            {pr.stack && (
-              <div className="chips">
-                {pr.stack.map((s) => (
-                  <span className="chip" key={s}>{s}</span>
-                ))}
+        {data.projects.map((pr) => {
+          const isExpanded = expandedCards[pr.title];
+          const shouldTruncate = pr.summary.length > 150;
+          const displayText = shouldTruncate && !isExpanded ? truncateText(pr.summary) : pr.summary;
+          
+          return (
+            <div className="card project-card" key={pr.title}>
+              <div className="card__header">
+                <h3>{pr.title}</h3>
               </div>
-            )}
-            <div className="project-links" style={{ marginTop: '1rem', display: 'flex', gap: '0.5rem' }}>
-              {pr.links?.github && (
-                <a 
-                  href={pr.links.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="icon-link"
-                  aria-label="GitHub Repository"
-                  style={{ color: 'var(--text-color)' }}
-                >
-                  <GitHubIcon />
-                </a>
+              <div className="card__period">
+                <span className="muted">{pr.period}</span>
+              </div>
+              <div className="card__content">
+                <p>{displayText}</p>
+                {shouldTruncate && (
+                  <button 
+                    className="read-more-btn"
+                    onClick={() => toggleExpanded(pr.title)}
+                  >
+                    {isExpanded ? 'Read less' : 'Read more...'}
+                  </button>
+                )}
+              </div>
+              {pr.stack && (
+                <div className="chips">
+                  {pr.stack.map((s) => (
+                    <span className="chip" key={s}>{s}</span>
+                  ))}
+                </div>
               )}
-              {pr.links?.colab && (
-                <a 
-                  href={pr.links.colab} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="icon-link"
-                  aria-label="Google Colab Notebook"
-                  style={{ color: '#f9ab00' }}
-                >
-                  <ColabIcon />
-                </a>
-              )}
+              <div className="project-links">
+                {pr.links?.github && (
+                  <a 
+                    href={pr.links.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="icon-link"
+                    aria-label="GitHub Repository"
+                  >
+                    <GitHubIcon />
+                  </a>
+                )}
+                {pr.links?.colab && (
+                  <a 
+                    href={pr.links.colab} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="icon-link"
+                    aria-label="Google Colab Notebook"
+                  >
+                    <ColabIcon />
+                  </a>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {data.hackathons && data.hackathons.length > 0 && (
         <div className="section" style={{ marginTop: '2rem' }}>
           <h2>Hackathons</h2>
           <div className="grid grid--spacious" style={{ marginTop: '1rem' }}>
-            {data.hackathons.map((h) => (
-              <div className="card" key={h.title}>
-                <div className="card__header">
-                  <h3>{h.title}</h3>
-                </div>
-                <div className="card__period">
-                  <span className="muted">{h.period}</span>
-                </div>
-                {h.hackathon && (
-                  <div className="card__subheader">
-                    <strong>{h.hackathon}</strong>
+            {data.hackathons.map((h) => {
+              const isExpanded = expandedCards[`hackathon-${h.title}`];
+              const shouldTruncate = h.summary && h.summary.length > 150;
+              const displayText = shouldTruncate && !isExpanded ? truncateText(h.summary) : h.summary;
+              
+              return (
+                <div className="card project-card" key={h.title}>
+                  <div className="card__header">
+                    <h3>{h.title}</h3>
                   </div>
-                )}
-                {h.role && <div className="muted">{h.role}</div>}
-                {h.summary && <p>{h.summary}</p>}
-                {h.links?.github && (
-                  <div style={{ marginTop: '.6rem' }}>
-                    <a className="btn" href={h.links.github} target="_blank" rel="noreferrer">View on GitHub</a>
+                  <div className="card__period">
+                    <span className="muted">{h.period}</span>
                   </div>
-                )}
-              </div>
-            ))}
+                  {h.hackathon && (
+                    <div className="card__subheader">
+                      <strong>{h.hackathon}</strong>
+                    </div>
+                  )}
+                  {h.role && <div className="muted">{h.role}</div>}
+                  {h.summary && (
+                    <div className="card__content">
+                      <p>{displayText}</p>
+                      {shouldTruncate && (
+                        <button 
+                          className="read-more-btn"
+                          onClick={() => toggleExpanded(`hackathon-${h.title}`)}
+                        >
+                          {isExpanded ? 'Read less' : 'Read more...'}
+                        </button>
+                      )}
+                    </div>
+                  )}
+                  {h.links?.github && (
+                    <div style={{ marginTop: '.6rem' }}>
+                      <a className="btn" href={h.links.github} target="_blank" rel="noreferrer">View on GitHub</a>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       )}

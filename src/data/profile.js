@@ -24,14 +24,15 @@ const data = {
       years: 'Expected Dec 2026',
       gpa: '4.00/4.00',
       coursework: [
-        'Computer Networks & Security',
-        'Cryptography',
         'Data Mining',
         'Machine Learning',
         'Computer Organization & Programming',
         'Generative AI',
+        'Natural Language Processing',
         'Big Data',
-        'Data Science'
+        'Data Science',
+        'Computer Networks & Security',
+        'Cryptography'
       ]
     },
     {
@@ -74,7 +75,7 @@ const data = {
       company: 'Zoho - ManageEngine',
       location: 'Chennai, India',
       role: 'Full Stack Development Engineer - Member Technical Staff',
-      period: 'Jan 2022 – Apr 2025',
+      period: 'Jan 2022 - Apr 2025',
       points: [
         'Led the development of Nutanix NAS support for DataSecurity Plus, enabling comprehensive file auditing and access control for Nutanix storage environments.',
         'Implemented critical security fixes and vulnerability patches across the application stack, significantly improving system security and stability.',
@@ -91,7 +92,7 @@ const data = {
       company: 'ZoomRx HealthCare Pvt. Ltd.',
       location: 'Chennai, India',
       role: 'Software Development Engineer',
-      period: 'Feb 2021 – Dec 2021',
+      period: 'Feb 2021 - Dec 2021',
       points: [
         'Enhanced a data-driven survey platform and resolved customer issues.',
         'Built Ember.js projects with JavaScript, MySQL, and Java; transitioned from intern to SDE.',
@@ -103,7 +104,7 @@ const data = {
       company: 'Oneyes Technologies',
       location: 'Chennai, India',
       role: 'Intern',
-      period: 'Dec 2019 – Dec 2019 · 1 mo',
+      period: 'Dec 2019 - Dec 2019',
       points: [
         'Practiced core Machine Learning algorithms and workflows.',
         'Solved programming problems and refreshed HTML fundamentals.'
@@ -114,7 +115,7 @@ const data = {
       company: 'RETECH SOLUTIONS PVT LTD',
       location: 'Chennai, India',
       role: 'Student Intern',
-      period: 'Dec 2018 – Dec 2018 · 1 mo',
+      period: 'Dec 2018 - Dec 2018',
       points: [
         'Learnt introduction to .NET and related development basics.',
         'Improved problem solving and HTML fundamentals.'
@@ -125,7 +126,7 @@ const data = {
       company: 'NSICLTD',
       location: 'Chennai, India',
       role: 'Student Intern — Mobile Application Developer',
-      period: 'Dec 2018 – Dec 2018 · 1 mo',
+      period: 'Dec 2018 - Dec 2018',
       points: [
         'Interned as a mobile application developer.',
         'Learned and practiced Android app development using Android Studio.',
@@ -137,7 +138,7 @@ const data = {
       company: 'Western Michigan University',
       location: 'Kalamazoo, MI, USA',
       role: 'Research Coordinator - Data Science & AI Club',
-      period: 'Aug 2025 – Present',
+      period: 'Aug 2025 - Present',
       points: [
         'Leading research initiatives and coordinating student projects in data science and artificial intelligence.',
         'Organizing workshops, seminars, and collaborative research sessions with faculty and industry professionals.',
@@ -179,7 +180,7 @@ const data = {
         'Assist students and staff with hardware configuration, software troubleshooting, and system optimization.',
         'Ensure reliable operation of lab equipment while delivering hands-on technical support for academic and experiential learning initiatives.'
       ],
-      stack: ['Retail Management', 'Team Leadership', 'Inventory Management', 'Customer Service', 'Operations']
+      stack: ['IT Support', 'Technical Troubleshooting', 'System Administration', 'Technical Writing', 'Communication']
     }
   ],
   projects: [
@@ -412,7 +413,7 @@ const data = {
       title: 'Programming Tutor',
       organization: 'Sri Sairam Engineering College',
       location: 'Chennai, India',
-      period: 'Apr 2020 – Jun 2020',
+      period: 'Apr 2020 - Jun 2020',
       points: [
         'Volunteered as a technical trainer for junior students.',
         'Taught C, Python, and C++ from basics to problem-solving techniques; ran hands-on practice sessions.'
@@ -422,7 +423,7 @@ const data = {
       title: 'Research Coordinator',
       organization: 'Data Science & AI Club, Western Michigan University',
       location: 'Kalamazoo, Michigan',
-      period: 'Aug – Present',
+      period: 'Aug - Present',
       points: [
         'Coordinating student-led research initiatives and reading groups in data science and AI.',
         'Organizing talks, workshops, and collaborations across campus labs and departments.'
@@ -577,6 +578,11 @@ const data = {
       file: '/My_Portfolio/certifications/Security.pdf'
     },
     {
+      title: 'Supply Chain Foundations: Analytics',
+      issuer: 'Coursera',
+      file: '/My_Portfolio/certifications/CertificateOfCompletion_Supply Chain Foundations Analytics.pdf'
+    },
+    {
       title: 'The Sustainable Development Goals',
       issuer: 'Coursera',
       file: '/My_Portfolio/certifications/The Sustainable Development Goals.pdf'
@@ -584,7 +590,7 @@ const data = {
   ],
   skills: {
     programming: [
-      'Generative AI', 'Big Data', 'Data Science',
+      'Generative AI', 'Big Data', 'Data Science', 'Power BI',
       'Java', 'Python', 'JavaScript', 'HTML/CSS', 'SQL', 'Node.js', 'React.js', 'MATLAB', 'R', 'C++', 'C', 'C#', 'Swift (iOS)', 'MongoDB', 'PostgreSQL', 'MySQL'
     ],
     tools: [

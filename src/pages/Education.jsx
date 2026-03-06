@@ -9,11 +9,11 @@ export default function Education() {
         {data.education.map((ed) => (
           <div className="timeline__item" key={ed.school}>
             <div className="timeline__heading">
-              <h3>{ed.degree}</h3>
+              <h3 style={{ color: '#3b82f6' }}>{ed.degree}</h3>
               <span className="muted">{ed.years}</span>
             </div>
             <div className="timeline__meta">
-              <strong>{ed.school}</strong> · {ed.location}
+              <strong style={{ color: '#3b82f6' }}>{ed.school}</strong> · {ed.location}
             </div>
             <div className="chips">
               <span className="chip">GPA: {ed.gpa}</span>

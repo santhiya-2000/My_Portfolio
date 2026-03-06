@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import data from '../data/profile.js';
 
 export default function Home() {
   const { name, title, summary, contact, hero } = data;
+  const [expandedCards, setExpandedCards] = useState({});
+
+  const toggleExpanded = (title) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [title]: !prev[title]
+    }));
+  };
+
+  const truncateText = (text, maxLength = 150) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + '...';
+  };
 
   const techs = [
     'React', 'JavaScript', 'Python', 'Java',
     'C', 'C++', 'C#', 'Ember', 'R',
     'MongoDB', 'MySQL', 'PostgreSQL',
     'HTML', 'CSS', 'Data Structures', 'OOPS', 'AI', 'OpenAI',
-    'Firebase', 'Google Colab', 'R Studio', 'Git', 'Gradle', 'AWS', 'VSCode', 'WindSurf', 'Figma'
+    'PowerBi', 'Google Colab', 'R Studio', 'Git', 'Gradle', 'AWS', 'VSCode', 'WindSurf', 'Figma'
   ];
 
   const renderIconSVG = (name) => {
@@ -202,7 +215,7 @@ export default function Home() {
                 <h3>{ed.degree}</h3>
                 <span className="muted">{ed.years}</span>
               </div>
-              <div className="timeline__meta"><strong>{ed.school}</strong> · {ed.location}</div>
+              <div className="timeline__meta"><strong style={{ color: '#3b82f6' }}>{ed.school}</strong> · {ed.location}</div>
               {ed.coursework && (
                 <div className="chips">
                   {ed.coursework.slice(0, 6).map((c) => (
@@ -254,37 +267,74 @@ export default function Home() {
           <p className="section__intro" style={{ textAlign: 'justify' }}>Selected personal and academic work.</p>
         </div>
         <div className="grid grid--spacious">
-          {data.projects.slice(0, 4).map((pr) => (
-            <div className="card" key={pr.title}>
-              <div className="card__header">
-                <h3>{pr.title}</h3>
-                <span className="muted">{pr.period}</span>
-              </div>
-              <p style={{ textAlign: 'justify' }}>{pr.summary}</p>
-              {pr.stack && (
-                <div className="chips">
-                  {pr.stack.map((s) => (
-                    <span className="chip" key={s}>{s}</span>
-                  ))}
+          {data.projects.slice(0, 4).map((pr) => {
+            const isExpanded = expandedCards[pr.title];
+            const shouldTruncate = pr.summary.length > 150;
+            const displayText = shouldTruncate && !isExpanded ? truncateText(pr.summary) : pr.summary;
+            
+            return (
+              <div className="card project-card" key={pr.title}>
+                <div className="card__header">
+                  <h3>{pr.title}</h3>
+                  <span className="muted">{pr.period}</span>
                 </div>
-              )}
-            </div>
-          ))}
+                <div className="card__content">
+                  <p style={{ textAlign: 'justify' }}>{displayText}</p>
+                  {shouldTruncate && (
+                    <button 
+                      className="read-more-btn"
+                      onClick={() => toggleExpanded(pr.title)}
+                    >
+                      {isExpanded ? 'Read less' : 'Read more...'}
+                    </button>
+                  )}
+                </div>
+                {pr.stack && (
+                  <div className="chips">
+                    {pr.stack.slice(0, 8).map((s) => (
+                      <span className="chip" key={s}>{s}</span>
+                    ))}
+                    {pr.stack.length > 8 && (
+                      <span className="chip muted">+{pr.stack.length - 8} more</span>
+                    )}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
         {data.hackathons && data.hackathons.length > 0 && (
           <div className="section" style={{ marginTop: '1rem' }}>
             <h3 className="muted" style={{ margin: '.4rem 0' }}>Hackathons</h3>
             <div className="grid grid--spacious">
-              {data.hackathons.slice(0, 2).map((h) => (
-                <div className="card" key={h.title}>
-                  <div className="card__header">
-                    <h3>{h.title}</h3>
-                    <span className="muted">{h.period}</span>
+              {data.hackathons.slice(0, 2).map((h) => {
+                const isExpanded = expandedCards[`hackathon-${h.title}`];
+                const shouldTruncate = h.summary && h.summary.length > 150;
+                const displayText = shouldTruncate && !isExpanded ? truncateText(h.summary) : h.summary;
+                
+                return (
+                  <div className="card project-card" key={h.title}>
+                    <div className="card__header">
+                      <h3>{h.title}</h3>
+                      <span className="muted">{h.period}</span>
+                    </div>
+                    {h.hackathon && <div className="card__subheader"><strong>{h.hackathon}</strong></div>}
+                    {h.summary && (
+                      <div className="card__content">
+                        <p>{displayText}</p>
+                        {shouldTruncate && (
+                          <button 
+                            className="read-more-btn"
+                            onClick={() => toggleExpanded(`hackathon-${h.title}`)}
+                          >
+                            {isExpanded ? 'Read less' : 'Read more...'}
+                          </button>
+                        )}
+                      </div>
+                    )}
                   </div>
-                  {h.hackathon && <div className="card__subheader"><strong>{h.hackathon}</strong></div>}
-                  {h.summary && <p style={{ textAlign: 'justify' }}>{h.summary}</p>}
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}

@@ -25,10 +25,10 @@ export default function Certifications() {
               {c.description && <p>{c.description}</p>}
               <div className="btn-group">
                 {c.file && (
-                  <a className="btn btn-primary" href={c.file} target="_blank" rel="noreferrer">View PDF</a>
-                )}
-                {c.file && (
-                  <a className="btn" href={c.file} download>Download</a>
+                  <>
+                    <a className="btn btn-primary btn-sm" href={c.file} target="_blank" rel="noreferrer">View PDF</a>
+                    <a className="btn btn-sm" href={c.file} download>Download</a>
+                  </>
                 )}
               </div>
             </div>
