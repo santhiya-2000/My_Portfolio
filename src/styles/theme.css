@@ -88,7 +88,7 @@ body {
   display: flex; 
   align-items: center; 
   justify-content: space-between; 
-  padding: 1rem 2rem;  /* Increased horizontal padding */
+  padding: 1rem 2rem; 
   border-bottom: 1px solid var(--border);
   background: var(--bg-elev);
   position: sticky;
@@ -99,9 +99,10 @@ body {
 }
 .nav__brand { 
   font-weight: 700; 
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: var(--primary);
   text-decoration: none;
+  margin-left: 0;
 }
 .nav__menu { 
   display: flex; 
@@ -140,41 +141,6 @@ body {
   font-size: 1.4rem;
   color: var(--primary);
   text-decoration: none;
-}
-
-/* Mobile navigation */
-@media (max-width: 768px) {
-  .nav {
-    padding: 0.75rem 1rem;
-  }
-  
-  .nav__brand {
-    font-size: 1.2rem;
-  }
-  
-  .nav__menu {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .nav__menu a {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.6rem;
-  }
-  
-  .nav__menu a.active {
-    padding: 0.4rem 0.8rem;
-  }
-  
-  .nav__menu a.btn-primary {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-  }
-  
-  .theme-toggle {
-    padding: 0.4rem;
-  }
 }
 
 /* Dark header tint */

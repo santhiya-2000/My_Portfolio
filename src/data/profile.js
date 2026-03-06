@@ -195,7 +195,6 @@ const data = {
       ],
       links: {
         github: 'https://github.com/santhiya-2000/Factory-Intelligence-Copilot',
-        demo: '#'
       }
     },
     {
@@ -209,7 +208,6 @@ const data = {
       ],
       links: {
         github: 'https://github.com/santhiya-2000/SmartComfort-HVAC',
-        demo: '#'
       }
     },
     {
@@ -220,8 +218,7 @@ const data = {
         'Python', 'React.js', 'Stable Diffusion', 'Natural Language Processing (NLP)', 'Generative AI'
       ],
       links: {
-        github: 'https://github.com/santhiya-2000/Generative_AI_Project.git',
-        demo: '#'
+        github: 'https://github.com/santhiya-2000/Generative_AI_Project.git'
       }
     },
     {
@@ -253,20 +250,6 @@ const data = {
       }
     },
     {
-      title: 'Nutanix Dashboard (Zoho – ManageEngine DataSecurity Plus)',
-      period: '2024',
-      summary: 'Administrators managing Nutanix infrastructure lacked a centralized way to monitor system performance, storage utilization, and infrastructure health. I developed a dashboard that collected infrastructure metrics through Nutanix APIs and visualized system performance, capacity usage, and activity trends so administrators could monitor environments from a single interface. The dashboard improved operational visibility and helped administrators detect infrastructure issues faster without manually checking multiple systems.',
-      stack: [
-        'Java', 'JavaScript', 'Nutanix API', 'REST APIs', 'Data Visualization',
-        'Dashboard Development', 'System Monitoring', 'Infrastructure Management',
-        'API Integration', 'Real-time Analytics'
-      ],
-      links: {
-        github: 'https://github.com/santhiya-2000/Nutanix-Dashboard',
-        demo: '#'
-      }
-    },
-    {
       title: 'Power BI Scheduling Dashboard',
       period: '2024',
       summary: 'Different schedulers maintain production schedules in separate Excel spreadsheets with inconsistent formats, making it difficult for managers to understand production plans quickly. I used Power Query to standardize different spreadsheet formats and built a Power BI dashboard that shows total production, workload by line, scheduling trends, and estimated capacity utilization. The dashboard consolidates multiple schedules into a single operational view and can automatically update when Excel files refresh.',
@@ -276,8 +259,7 @@ const data = {
         'Production Analytics', 'Capacity Planning'
       ],
       links: {
-        github: 'https://github.com/santhiya-2000/Power-BI-Scheduling',
-        demo: '#'
+        demo: '/My_Portfolio/public/dashboards/Scheduler_Dashboard.pdf'
       }
     },
     {
@@ -343,10 +325,6 @@ const data = {
         'Medical Image Processing', 'Model Optimization', 'Flask', 'Docker',
         'MongoDB', 'RESTful APIs', 'Team Leadership', 'Agile Methodology'
       ],
-      links: {
-        github: 'https://github.com/your-username/strep-throat-detection',
-        paper: '#'
-      }
     },
     {
       title: 'Contact Management System',
@@ -359,7 +337,6 @@ const data = {
       ],
       links: {
         github: 'https://github.com/akgWMU/pa3-datastructs-contact-management-system-f25cs5115-santhiya-2000',
-        documentation: '#'
       }
     }
   ],
