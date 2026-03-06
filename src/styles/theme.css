@@ -142,6 +142,41 @@ body {
   text-decoration: none;
 }
 
+/* Mobile navigation */
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.75rem 1rem;
+  }
+  
+  .nav__brand {
+    font-size: 1.2rem;
+  }
+  
+  .nav__menu {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav__menu a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .nav__menu a.active {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .nav__menu a.btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .theme-toggle {
+    padding: 0.4rem;
+  }
+}
+
 /* Dark header tint */
 :root[data-theme="dark"] .nav { 
   background: rgba(15, 23, 42, 0.95);
