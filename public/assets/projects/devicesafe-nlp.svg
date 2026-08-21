@@ -1,0 +1,53 @@
+<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="medicalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f472b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="240" fill="url(#bgGrad2)"/>
+  
+  <!-- Device/Shield with medical cross -->
+  <g transform="translate(200, 110)">
+    <!-- Shield outline -->
+    <path d="M -35 -35 L 35 -35 L 35 10 Q 0 40 0 40 Q 0 40 -35 10 Z" 
+          fill="url(#medicalGrad)" opacity="0.2" stroke="#f472b6" stroke-width="2"/>
+    
+    <!-- Medical cross -->
+    <g fill="#f472b6">
+      <rect x="-4" y="-20" width="8" height="40" rx="2"/>
+      <rect x="-20" y="-4" width="40" height="8" rx="2"/>
+    </g>
+    
+    <!-- Safety badge -->
+    <circle cx="25" cy="-25" r="12" fill="#fbbf24" opacity="0.8"/>
+    <text x="25" y="-20" font-family="Poppins" font-size="14" font-weight="700" text-anchor="middle" fill="#1a1d23">!</text>
+  </g>
+  
+  <!-- Data flow indicators -->
+  <g transform="translate(70, 180)" opacity="0.6">
+    <circle cx="0" cy="0" r="3" fill="#f472b6"/>
+    <line x1="8" y1="0" x2="40" y2="0" stroke="#f472b6" stroke-width="1.5"/>
+    <circle cx="48" cy="0" r="3" fill="#f472b6"/>
+    <line x1="56" y1="0" x2="88" y2="0" stroke="#f472b6" stroke-width="1.5"/>
+    <circle cx="96" cy="0" r="3" fill="#f472b6"/>
+  </g>
+  
+  <!-- Document/Report symbol -->
+  <g transform="translate(280, 170)">
+    <rect x="0" y="0" width="30" height="40" rx="2" fill="none" stroke="#f472b6" stroke-width="1.5" opacity="0.7"/>
+    <line x1="5" y1="10" x2="25" y2="10" stroke="#f472b6" stroke-width="1" opacity="0.5"/>
+    <line x1="5" y1="18" x2="25" y2="18" stroke="#f472b6" stroke-width="1" opacity="0.5"/>
+    <line x1="5" y1="26" x2="20" y2="26" stroke="#f472b6" stroke-width="1" opacity="0.5"/>
+  </g>
+  
+  <!-- Labels -->
+  <text x="200" y="25" font-family="Poppins" font-size="14" font-weight="600" text-anchor="middle" fill="#1a1d23">DeviceSafe NLP</text>
+  <text x="200" y="43" font-family="Poppins" font-size="11" text-anchor="middle" fill="#6b7280">Medical Device Safety</text>
+</svg>

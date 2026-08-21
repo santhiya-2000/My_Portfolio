@@ -72,6 +72,19 @@ const data = {
   ],
   experience: [
     {
+      company: 'Zoetis Inc.',
+      location: 'Kalamazoo, Michigan',
+      role: 'Supply Chain Data Analytics Intern',
+      period: 'May 2026 – Sep 2026',
+      points: [
+        'Collaborated with scheduling subject-matter experts to translate manufacturing and supply-chain requirements into data-processing and reporting solutions.',
+        'Developed validation and transformation workflows to standardise operational scheduling data from multiple teams.',
+        'Tested data-processing logic against source records, investigated inconsistencies, and corrected issues to improve reporting reliability.',
+        'Created technical documentation covering data rules, refresh procedures, validation steps, and system usage.'
+      ],
+      stack: ['Data Analytics', 'Supply Chain', 'Data Validation', 'Data Transformation', 'Reporting', 'Technical Documentation']
+    },
+    {
       company: 'Zoho - ManageEngine',
       location: 'Chennai, India',
       role: 'Full Stack Development Engineer - Member Technical Staff',
@@ -187,6 +200,7 @@ const data = {
     {
       title: 'Factory Intelligence Copilot',
       period: '2026',
+      image: 'factory-intelligence.svg',
       summary: 'Manufacturing teams often struggle to understand production inefficiencies because data is scattered across different systems like machine logs, maintenance records, and production reports. I built an analytics platform that ingests manufacturing data using a Python ETL pipeline into a PostgreSQL database, structured data using a star-schema model, and created a Streamlit dashboard showing key KPIs like downtime, scrap rate, and cost impact. I also added an AI Copilot that converts natural language questions into SQL queries. The system helps production managers quickly identify bottlenecks, predict machine failures, and make data-driven decisions to reduce waste and improve operational efficiency.',
       stack: [
         'Python', 'PostgreSQL', 'SQL', 'Streamlit', 'Pandas', 
@@ -200,6 +214,7 @@ const data = {
     {
       title: 'SmartComfort (HVAC Optimization)',
       period: '2025',
+      image: 'smartcomfort-hvac.svg',
       summary: 'Buildings often waste energy because HVAC systems run on static settings rather than adapting to occupancy patterns and user comfort preferences. I developed a data platform that integrates building sensor data, user survey responses, and energy consumption metrics, then used machine learning models to predict optimal temperature settings and visualize performance through dashboards. The platform helps facilities teams optimize energy usage while maintaining comfort, targeting a 5–10% reduction in energy consumption across campus buildings.',
       stack: [
         'Python', 'Machine Learning', 'Data Integration', 'Sensor Data', 
@@ -211,8 +226,36 @@ const data = {
       }
     },
     {
+      title: 'LifeSpanAI – Hybrid Transformer-LSTM for RUL Prediction',
+      period: '2026',
+      image: 'lifespan-ai.svg',
+      summary: 'LifeSpanAI predicts remaining useful life for turbofan engines using a hybrid Transformer-LSTM model on NASA CMAPSS data. The architecture combines multi-head self-attention to capture global temporal dependencies with stacked LSTM layers that model sequential degradation. I benchmarked the system against Vanilla LSTM, CNN-LSTM, and Transformer-only baselines using RMSE and MAE across FD001–FD004, and added explainability through permutation-based feature importance and attention-weight visualization. A Streamlit dashboard supports real-time engine selection, sensor exploration, RUL prediction, and natural language Q&A.',
+      stack: [
+        'Python', 'Deep Learning', 'Transformer', 'LSTM', 'Time Series',
+        'Streamlit', 'Explainable AI', 'NASA CMAPSS', 'Model Evaluation'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/LifeSpanAI'
+      }
+    },
+    {
+      title: 'DeviceSafe NLP – RAG Pipeline for Medical Device Failure Signals',
+      period: '2026',
+      image: 'devicesafe-nlp.svg',
+      summary: 'DeviceSafe NLP is an end-to-end pipeline for extracting medical device failure signals from FDA MAUDE adverse event reports using domain-specific NLP and retrieval-augmented generation. I processed 928 reports across five device categories, compared scispaCy against general English taggers, and evaluated BERT variants plus AWS Comprehend Medical. The system achieved 80% grounding, 90% accuracy, and 100% relevance on a RAG chatbot evaluation, with failures attributed to retrieval gaps rather than hallucination.',
+      stack: [
+        'Python', 'NLP', 'RAG', 'BERT', 'scispaCy',
+        'AWS Comprehend Medical', 'Regulatory Text', 'Information Extraction',
+        'Medical Devices'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/devicesafe-nlp'
+      }
+    },
+    {
       title: 'StoryIllustrator-AI',
       period: '2025',
+      image: 'storyillustrator-ai.svg',
       summary: 'The project demonstrates a creative, hands-on application of generative AI that bridges language understanding and visual synthesis, highlighting the potential of diffusion models to transform storytelling into an automatically illustrated visual experience. Developed an end-to-end AI pipeline combining NLP and generative models, demonstrating automation of creative workflows using machine learning.',
       stack: [
         'Python', 'React.js', 'Stable Diffusion', 'Natural Language Processing (NLP)', 'Generative AI'
@@ -224,6 +267,7 @@ const data = {
     {
       title: 'Data Structure Visualization',
       period: '2025',
+      image: 'data-structure-viz.svg',
       summary: 'An interactive web application for visualizing common data structures and algorithms. Helps students and developers understand how data structures work through step-by-step visualizations and animations.',
       stack: [
         'React', 'JavaScript', 'HTML5', 'CSS3', 'D3.js',
@@ -238,6 +282,7 @@ const data = {
     {
       title: 'Personal Portfolio',
       period: '2025',
+      image: 'personal-portfolio.svg',
       summary: 'A responsive portfolio website built with React, showcasing my projects, skills, and experience. Features a clean, modern design with dark/light mode support.',
       stack: [
         'React', 'JavaScript', 'CSS3', 'HTML5', 'Vite',
@@ -252,6 +297,7 @@ const data = {
     {
       title: 'Power BI Scheduling Dashboard',
       period: '2024',
+      image: 'power-bi-dashboard.svg',
       summary: 'Different schedulers maintain production schedules in separate Excel spreadsheets with inconsistent formats, making it difficult for managers to understand production plans quickly. I used Power Query to standardize different spreadsheet formats and built a Power BI dashboard that shows total production, workload by line, scheduling trends, and estimated capacity utilization. The dashboard consolidates multiple schedules into a single operational view and can automatically update when Excel files refresh.',
       stack: [
         'Power BI', 'Power Query', 'Excel Integration', 'Data Transformation',
@@ -265,6 +311,7 @@ const data = {
     {
       title: 'Optimisation of Feature Selection for Classification of SLE',
       period: 'Dec 2019 - Apr 2020',
+      image: 'sle-classification.svg',
       summary: 'Selected vital features to diagnose SLE using Wrapper methods and PCA for dimensionality reduction and improved classification.',
       stack: [
         'Python', 'Scikit-learn', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn',
@@ -278,6 +325,7 @@ const data = {
     {
       title: 'Mere Estimation of Autistic Spectrum Disorder',
       period: 'Dec 2020 - Apr 2021',
+      image: 'autism-detection.svg',
       summary: 'Developed an approach to predict autism early using dimensionality reduction with PCA and Self-Organising Maps (SOM). Performed a comparative evaluation against a CNN-based method and achieved improved prediction accuracy.',
       stack: [
         'Python', 'TensorFlow', 'Keras', 'Scikit-learn', 'NumPy', 'Pandas',
@@ -292,6 +340,7 @@ const data = {
     {
       title: 'Todo Application',
       period: '2025',
+      image: 'todo-app.svg',
       summary: 'A simple and efficient Todo application to manage daily tasks and boost productivity with features like task categorization, due dates, and priority levels.',
       stack: [
         'React', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'React Hooks',
@@ -305,6 +354,7 @@ const data = {
     {
       title: 'FlightBrief AI',
       period: '2025',
+      image: 'flightbrief-ai.svg',
       summary: 'Web application that helps sales reps input a flight number and get comprehensive information about frequent routes, flight details, and maintenance history. Features include automated report generation and integration with flight data APIs.',
       stack: [
         'Next.js', 'React', 'TypeScript', 'Node.js', 'OpenSky API',
@@ -318,6 +368,7 @@ const data = {
     {
       title: 'Strep Throat Detection',
       period: '2025 - Present',
+      image: 'strep-throat.svg',
       summary: 'Leading a team in the Data Science & AI club to develop a deep learning model for detecting strep throat from medical images, with the goal of assisting in early diagnosis and reducing unnecessary antibiotic prescriptions.',
       stack: [
         'Python', 'TensorFlow', 'Keras', 'OpenCV', 'NumPy', 'Pandas',
@@ -329,6 +380,7 @@ const data = {
     {
       title: 'Contact Management System',
       period: '2025',
+      image: 'contact-management.svg',
       summary: 'Implemented a comprehensive Contact Management System in C that demonstrates the practical application of various data structures including Array, Linked List, Hash Map, Binary Search Tree (BST), and AVL Tree, complete with performance benchmarking and visualization.',
       stack: [
         'C', 'Data Structures', 'Algorithms', 'Memory Management', 'Pointers',
@@ -345,6 +397,7 @@ const data = {
       title: 'FlightBrief-AI',
       hackathon: 'LocalHost AI Hackathon',
       period: '15th September',
+      image: 'hackathon-flightbrief.svg',
       summary:
         'Helps sales reps input a flight number and get a brief about frequent routes, info, and last maintenance. Uses OpenSky API for flight data and LLM prompts to generate a downloadable report.',
       links: {
@@ -356,6 +409,7 @@ const data = {
       title: 'Cryptic lock',
       hackathon: 'Oneyes Hackathon 2019',
       period: 'July 6, 2019',
+      image: 'hackathon-cryptic.svg',
       award: 'Won The Best Team Award',
       summary:
         'Built an innovative double-encryption technique to strengthen network security so intruders cannot decrypt ciphertext. Combined a Transposition algorithm (Rail Fence Cipher) with a Substitution algorithm (Vigenère Cipher). Example: "DEFINE" with key=3 -> Rail Fence: "DNEIEF"; then Vigenère with key "ANT" -> "DAXIRY". Applicable to RFID contexts where secure identification is critical.',

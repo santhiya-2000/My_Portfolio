@@ -43,9 +43,15 @@ export default function Projects() {
           const isExpanded = expandedCards[pr.title];
           const shouldTruncate = pr.summary.length > 150;
           const displayText = shouldTruncate && !isExpanded ? truncateText(pr.summary) : pr.summary;
+          const imageSrc = pr.image ? `${import.meta.env.BASE_URL}assets/projects/${pr.image}` : null;
           
           return (
             <div className="card project-card" key={pr.title}>
+              {imageSrc && (
+                <div className="card__image-container">
+                  <img src={imageSrc} alt={pr.title} className="card__image" />
+                </div>
+              )}
               <div className="card__header">
                 <h3>{pr.title}</h3>
               </div>
@@ -118,9 +124,15 @@ export default function Projects() {
               const isExpanded = expandedCards[`hackathon-${h.title}`];
               const shouldTruncate = h.summary && h.summary.length > 150;
               const displayText = shouldTruncate && !isExpanded ? truncateText(h.summary) : h.summary;
+              const imageSrc = h.image ? `${import.meta.env.BASE_URL}assets/projects/${h.image}` : null;
               
               return (
                 <div className="card project-card" key={h.title}>
+                  {imageSrc && (
+                    <div className="card__image-container">
+                      <img src={imageSrc} alt={h.title} className="card__image" />
+                    </div>
+                  )}
                   <div className="card__header">
                     <h3>{h.title}</h3>
                   </div>
