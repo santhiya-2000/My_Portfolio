@@ -75,7 +75,7 @@ const data = {
       company: 'Zoetis Inc.',
       location: 'Kalamazoo, Michigan',
       role: 'Supply Chain Data Analytics Intern',
-      period: 'May 2026 – Sep 2026',
+      period: 'May 2026 – Nov 2026',
       points: [
         'Collaborated with scheduling subject-matter experts to translate manufacturing and supply-chain requirements into data-processing and reporting solutions.',
         'Developed validation and transformation workflows to standardise operational scheduling data from multiple teams.',
