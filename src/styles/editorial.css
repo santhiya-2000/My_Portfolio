@@ -1,0 +1,44 @@
+/* Editorial redesign — phase 1. Layered over the existing styles to preserve content. */
+:root {
+  --bg:#f7f6f2; --bg-elev:#ffffff; --text:#161b20; --muted:#657078;
+  --primary:#1d473b; --primary-600:#295e4e; --accent:#b6dc8c;
+  --accent-secondary:#c9d7c1; --chip:#eef1e9; --border:#dce2da;
+  --gradient-1:linear-gradient(120deg,#234f40,#377963);
+  --gradient-2:linear-gradient(120deg,#234f40,#5c8661);
+}
+:root[data-theme="dark"] {
+  --bg:#10171a; --bg-elev:#192327; --text:#f2f4ee; --muted:#b3c0bb;
+  --primary:#c8eb9b; --primary-600:#d7f5b3; --accent:#a7d87d;
+  --accent-secondary:#8cae9b; --chip:#263431; --border:#344541;
+  --gradient-1:linear-gradient(120deg,#355e4d,#4d8167);
+  --gradient-2:linear-gradient(120deg,#355e4d,#678c65);
+}
+html {scroll-behavior:smooth}
+body, :root[data-theme="dark"] body {
+  background:var(--bg);
+  background-image:radial-gradient(ellipse at 80% 0%,rgba(133,177,136,.10),transparent 48%);
+  background-attachment:scroll;
+}
+body {font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+.container {width:min(1180px,90%);padding-top:3rem}
+.nav, :root[data-theme="dark"] .nav {
+  background:color-mix(in srgb,var(--bg-elev) 88%,transparent);
+  border-bottom:1px solid var(--border);
+  box-shadow:none;
+  padding:1rem max(4%,calc((100vw - 1180px)/2));
+}
+.nav__brand {font-size:1.2rem;font-weight:800;letter-spacing:-.06em;color:var(--text)}
+.nav__menu {gap:clamp(.5rem,1.5vw,1.5rem)}
+.nav__menu a {font-size:.9rem}
+.nav__menu a.active {background:transparent;border-radius:0}
+h1,h2,h3 {letter-spacing:-.045em;line-height:1.14}
+h1 {font-size:clamp(2.9rem,6.5vw,6rem)}
+h2 {font-size:clamp(1.8rem,3.5vw,3rem)}
+.card {border-radius:20px;box-shadow:none;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.card:hover {transform:translateY(-4px);border-color:var(--primary);box-shadow:0 20px 45px rgba(15,30,25,.08)}
+.btn,.btn-primary,.nav__menu a.btn-primary {border-radius:999px}
+.btn-primary,.nav__menu a.btn-primary {background:var(--gradient-1);color:#fff}
+:root[data-theme="dark"] .btn-primary {color:#fff}
+a:focus-visible,button:focus-visible {outline:3px solid var(--accent);outline-offset:4px}
+@media(max-width:900px) {.nav {padding:1rem 4%}.nav__menu {gap:.6rem;flex-wrap:wrap;justify-content:flex-end}.container {width:92%}}
+@media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}*,*::before,*::after {animation-duration:.01ms!important;transition-duration:.01ms!important}}
