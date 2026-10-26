@@ -197,6 +197,67 @@ const data = {
     }
   ],
   projects: [
+      {
+        title: 'AutoEval – Autonomous Driving AI Evaluation Platform',
+        period: '2026',
+        image: 'autoeval.svg',
+        summary: 'Developed an autonomous driving simulation and AI evaluation platform designed to make vehicle behavior measurable, explainable, and reproducible. The platform supports driving scenario simulation using CARLA, vehicle telemetry processing, safety and perception evaluation, and automated regression testing. Built around a Next.js frontend, FastAPI backend, PostgreSQL, and a C++ metrics engine, the architecture supports evaluation of collision risks, trajectory deviations, perception accuracy, and inference latency. Added capabilities for failure investigation, model comparison, and LLM-assisted root cause analysis. A standalone demo mode enables scenario replay and performance analysis using synthetic data without requiring a GPU or physical vehicle.',
+        stack: [
+          'Python', 'C++17', 'FastAPI', 'Next.js', 'React',
+          'TypeScript', 'CARLA Simulator', 'PyTorch',
+          'OpenCV', 'PostgreSQL', 'Redis', 'WebSockets',
+          'Machine Learning', 'Autonomous Driving',
+          'AI Evaluation', 'Docker', 'Three.js'
+        ],
+        links: {
+          github: 'https://github.com/santhiya-2000/AutoEval',
+        }
+      },
+
+      {
+        title: 'TraceLens AI – LLM Observability & Evaluation Platform',
+        period: '2026',
+        image: 'tracelens-ai.svg',
+        summary: 'Built a Django-based AI observability prototype to help developers monitor language model interactions, trace inference failures, and evaluate response quality. Developed REST APIs for recording LLM requests, measuring execution latency, and comparing generated responses against reference answers using token-overlap evaluation. Implemented execution tracing across inference and evaluation stages, persistent request tracking using Django ORM and SQLite, and an observability dashboard displaying request and evaluation metrics. Added automated API tests and separate error tracking to distinguish model inference failures from evaluation failures. The prototype currently uses simulated LLM responses, providing a foundation for future integrations with production models, LLM-as-a-Judge evaluation, and token cost monitoring.',
+        stack: [
+          'Python', 'Django', 'Django REST Framework',
+          'SQLite', 'Django ORM', 'REST APIs',
+          'LLM Observability', 'AI Evaluation',
+          'Execution Tracing', 'Latency Monitoring',
+          'Automated Testing', 'HTML', 'CSS'
+        ],
+        links: {
+          github: 'https://github.com/santhiya-2000/tracelens-ai',
+        }
+      },
+      {
+      title: 'SportsZone – Full Stack E-Commerce Platform',
+      period: '2026',
+      image: 'sportszone.svg',
+      summary: 'Built a full-stack e-commerce platform for sports equipment using Django REST Framework and React. Developed REST APIs for user registration, authentication, and product management, with PostgreSQL for persistent data storage. Created a responsive frontend using React, Vite, and Tailwind CSS, integrating backend APIs for dynamic product listings. Used Postman to test API endpoints and validate backend functionality. The project demonstrates end-to-end application development, database integration, API design, and modern frontend engineering.',
+      stack: [
+        'Python', 'Django', 'Django REST Framework', 'React',
+        'JavaScript', 'PostgreSQL', 'Tailwind CSS', 'Vite',
+        'REST APIs', 'Postman', 'Full Stack Development'
+      ],
+      links: {
+        github: 'https://github.com/santhiya-2000/SportsEzone',
+      }
+    },
+
+    {
+      title: 'WaferVision – Semiconductor Wafer Inspection & Metrology',
+      period: '2026',
+      image: 'wafer-vision.svg',
+      summary: 'Developed a semiconductor wafer inspection and metrology system using C++, C#, OpenCV, and CUDA. Implemented computer vision algorithms for defect detection, wafer alignment, edge analysis, image segmentation, and geometric measurements. Built a three-point wafer alignment workflow to identify wafer boundaries, centers, and orientation. Optimized image-processing operations using GPU acceleration, achieving approximately 3x faster execution compared to CPU processing, with a CPU fallback. Improved edge-detection reliability by reducing false detections by approximately 40%. The system supports precision inspection, defect visualization, and performance benchmarking for semiconductor manufacturing applications.',
+      stack: [
+        'C++17', 'C#', 'OpenCV', 'CUDA', 'Computer Vision',
+        'Image Processing', 'GPU Acceleration', 'Algorithms',
+        'Image Segmentation', 'Metrology', 'Performance Optimization'
+      ],
+      links: {}
+    },
+
     {
       title: 'Factory Intelligence Copilot',
       period: '2026',
@@ -483,6 +544,12 @@ const data = {
     },
   ],
   awards: [
+    {
+      title: 'WMU Dames Scholarship',
+      issuer: 'Western Michigan University',
+      date: 'May 2026',
+      description: 'Awarded for outstanding academic performance.'
+    },
     {
       title: 'Leo Muthu Scholarship Award',
       issuer: 'Sri Sairam Engineering College',
