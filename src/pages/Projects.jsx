@@ -47,11 +47,11 @@ export default function Projects() {
           
           return (
             <div className="card project-card" key={pr.title}>
-              {imageSrc && (
+              {/* {imageSrc && (
                 <div className="card__image-container">
                   <img src={imageSrc} alt={pr.title} className="card__image" />
                 </div>
-              )}
+              )} */}
               <div className="card__header">
                 <h3>{pr.title}</h3>
               </div>
