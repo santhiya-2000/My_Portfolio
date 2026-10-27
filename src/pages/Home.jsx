@@ -1,412 +1,73 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import data from '../data/profile.js';
+import './home-experience.css';
+
+const capabilities = [
+  { code:'01', label:'INTELLIGENCE', title:'AI & Machine Learning', detail:'From models to decisions — applied intelligence designed for real workflows.', tags:['Generative AI','Predictive ML','Python'] },
+  { code:'02', label:'SYSTEMS', title:'Full-stack engineering', detail:'Building dependable products across interfaces, APIs, and data platforms.', tags:['React','Java','PostgreSQL'] },
+  { code:'03', label:'INDUSTRY', title:'Industrial data systems', detail:'Connecting manufacturing operations to clearer insights and smarter decisions.', tags:['Analytics','Automation','Data'] }
+];
+
+function SignalField() {
+  const [pointer,setPointer]=useState({x:50,y:50});
+  const dots=Array.from({length:63},(_,i)=>({x:8+(i%9)*10.5,y:10+Math.floor(i/9)*13}));
+  return <div className="hx-signal" onPointerMove={e=>{const r=e.currentTarget.getBoundingClientRect();setPointer({x:(e.clientX-r.left)/r.width*100,y:(e.clientY-r.top)/r.height*100})}} aria-label="Decorative visualization of a neural network">
+    <div className="hx-signal-glow" style={{'--mx':pointer.x+'%','--my':pointer.y+'%'}}/>
+    <svg viewBox="0 0 600 600" role="img" aria-label="Abstract connected network" preserveAspectRatio="xMidYMid meet">
+      <defs><linearGradient id="hxline"><stop stopColor="#8fe7ff"/><stop offset="1" stopColor="#8c7aff"/></linearGradient></defs>
+      <circle cx="300" cy="300" r="204" fill="none" stroke="#5c7e9a" strokeOpacity=".2" strokeDasharray="3 9"/>
+      <circle cx="300" cy="300" r="151" fill="none" stroke="#7ccaff" strokeOpacity=".24"/>
+      <circle cx="300" cy="300" r="99" fill="none" stroke="#7ccaff" strokeOpacity=".25" strokeDasharray="6 8"/>
+      {Array.from({length:12},(_,i)=>{const a=i*Math.PI/6;return <g key={i}><line x1={300+Math.cos(a)*99} y1={300+Math.sin(a)*99} x2={300+Math.cos(a)*204} y2={300+Math.sin(a)*204} stroke="url(#hxline)" strokeOpacity=".32"/><circle cx={300+Math.cos(a)*204} cy={300+Math.sin(a)*204} r="4" fill="#a1e6ff"/></g>})}
+      <g className="hx-orbit"><ellipse cx="300" cy="300" rx="240" ry="78" fill="none" stroke="#a2b8ff" strokeOpacity=".5" transform="rotate(-35 300 300)"/><circle cx="491" cy="156" r="9" fill="#a4efff"/></g>
+      <g className="hx-orbit-reverse"><ellipse cx="300" cy="300" rx="235" ry="95" fill="none" stroke="#7ac3f5" strokeOpacity=".35" transform="rotate(38 300 300)"/></g>
+      <circle cx="300" cy="300" r="62" fill="#101d33" stroke="#9cddff" strokeWidth="1.5"/>
+      <circle cx="300" cy="300" r="48" fill="#172c47"/>
+      <path d="M265 307 L288 281 L310 319 L334 289" fill="none" stroke="#b7f5ff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx="334" cy="289" r="5" fill="#d2f8ff"/>
+    </svg>
+    <div className="hx-float hx-float-top"><span className="hx-blink"/> SYSTEMS ONLINE</div>
+    <div className="hx-float hx-float-bottom">AI / DATA / SOFTWARE <span>↗</span></div>
+    <div className="hx-grid-dots">{dots.map((d,i)=><i key={i} style={{left:d.x+'%',top:d.y+'%'}}/>)}</div>
+  </div>;
+}
 
 export default function Home() {
-  const { name, title, summary, contact, hero } = data;
-  const [expandedCards, setExpandedCards] = useState({});
-
-  const toggleExpanded = (title) => {
-    setExpandedCards(prev => ({
-      ...prev,
-      [title]: !prev[title]
-    }));
-  };
-
-  const truncateText = (text, maxLength = 150) => {
-    if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength) + '...';
-  };
-
-  const techs = [
-    'React', 'JavaScript', 'Python', 'Java',
-    'C', 'C++', 'C#', 'Ember', 'R',
-    'MongoDB', 'MySQL', 'PostgreSQL',
-    'HTML', 'CSS', 'Data Structures', 'OOPS', 'AI', 'OpenAI',
-    'PowerBi', 'Google Colab', 'R Studio', 'Git', 'Gradle', 'AWS', 'VSCode', 'WindSurf', 'Figma'
-  ];
-
-  const renderIconSVG = (name) => {
-    switch (name) {
-      case 'React':
-        return (
-          <svg viewBox="0 0 256 256" width="28" height="28" aria-hidden>
-            <circle cx="128" cy="128" r="20" fill="#61DAFB"/>
-            <g fill="none" stroke="#2563eb" strokeWidth="10">
-              <ellipse cx="128" cy="128" rx="100" ry="40"/>
-              <ellipse cx="128" cy="128" rx="100" ry="40" transform="rotate(60 128 128)"/>
-              <ellipse cx="128" cy="128" rx="100" ry="40" transform="rotate(120 128 128)"/>
-            </g>
-          </svg>
-        );
-      case 'JavaScript':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#F7DF1E"/>
-            <path d="M70 98c0 14-8 22-22 22-10 0-16-5-20-11l12-7c2 3 4 6 9 6 5 0 8-2 8-10V63h13v35zm18 22c-13 0-21-6-26-14l12-7c3 4 7 8 14 8 6 0 9-3 9-7 0-5-3-7-10-10l-3-1c-10-4-17-9-17-21 0-10 8-18 20-18 9 0 15 3 20 11l-11 8c-2-4-5-6-9-6-4 0-7 2-7 6 0 4 3 6 10 9l3 1c12 5 18 10 18 22 0 12-9 19-23 19z" fill="#111827"/>
-          </svg>
-        );
-      case 'Python':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <path fill="#3776AB" d="M63 10c27 0 25 12 25 12v12H40c-17 0-17 17-17 17v17h23V58c0-10 10-10 10-10h32V22S90 10 63 10z"/>
-            <path fill="#FFD43B" d="M65 118c-27 0-25-12-25-12V94h48c17 0 17-17 17-17V60H82v10c0 10-10 10-10 10H40v26s3 12 25 12z"/>
-          </svg>
-        );
-      case 'Java':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <path fill="#EA2D2E" d="M63 16c15 14-15 21 0 34-26-8 8-21 0-34zM44 76c-8 5 4 9 19 9 18 0 33-5 33-10s-11-9-27-9c-12 0-21 2-25 5zM38 98c-7 4 6 8 26 8 22 0 37-5 37-10 0-6-13-9-31-9-14 0-26 2-32 6z"/>
-            <path fill="#2563eb" d="M46 54c-6 4 2 8 17 8 17 0 29-4 29-8 0-5-10-8-24-8-11 0-19 2-22 8z"/>
-          </svg>
-        );
-      case 'HTML':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#E34C26"/>
-            <path fill="#EF652A" d="M19 97l9-80h72l9 80H19z"/>
-            <path fill="#EBEBEB" d="M64 36v55l23-6 5-49H64z"/>
-            <path fill="#FFFFFF" d="M64 36H42l-2 20h24V36zm0 27v18l-12-3-1-10h-6l1 15 18 5v-25H64z"/>
-          </svg>
-        );
-      case 'CSS':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#1572B6"/>
-            <path fill="#33A9DC" d="M23 97l9-80h64l9 80H23z"/>
-            <path fill="#FFFFFF" d="M64 36v55l20-5 4-50H64zm0 27v18l-10-2-1-11h-5l1 16 15 4v-25H64z"/>
-          </svg>
-        );
-      case 'Git':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#F05032"/>
-            <path fill="#FFFFFF" d="M64 28l-6 6 12 12-12 12 6 6 18-18-18-18zm-12 12l-12 12 12 12 6-6-12-12 6-6zm24 24l-6 6 12 12-12 12 6 6 18-18-18-18zm-12 12l-18 18 18 18 6-6-12-12 12-12-6-6z"/>
-          </svg>
-        );
-      case 'AWS':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#FF9900"/>
-            <path fill="#FFFFFF" d="M64 32c-18 0-32 14-32 32s14 32 32 32 32-14 32-32-14-32-32-32zm0 58c-14 0-26-12-26-26s12-26 26-26 26 12 26 26-12 26-26 26z"/>
-            <path fill="#FFFFFF" d="M58 54h12v8H58v-8zm0 12h12v8H58v-8z"/>
-          </svg>
-        );
-      case 'VSCode':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#007ACC"/>
-            <path fill="#FFFFFF" d="M28 36l24 24-24 24-8-8 16-16-16-16 8-8zm72 0l8 8-16 16 16 16-8 8-24-24 24-24z"/>
-          </svg>
-        );
-      case 'Firebase':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#FFCA28"/>
-            <path fill="#FFA000" d="M64 28l-8 16-8-16 8-8 8 8zm-24 8l-8 16 16-8-8-8zm48 0l-8 8 16 8-8-16z"/>
-          </svg>
-        );
-      case 'MongoDB':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#47A248"/>
-            <path fill="#FFFFFF" d="M64 28c-8 0-16 8-16 16s8 16 16 16 16-8 16-16-8-16-16-16zm0 24c-4 0-8-4-8-8s4-8 8-8 8 4 8 8-4 8-8 8z"/>
-          </svg>
-        );
-      case 'MySQL':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#4479A1"/>
-            <path fill="#FFFFFF" d="M64 32c-12 0-22 10-22 22s10 22 22 22 22-10 22-22-10-22-22-22zm0 36c-8 0-14-6-14-14s6-14 14-14 14 6 14 14-6 14-14 14z"/>
-          </svg>
-        );
-      case 'PostgreSQL':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#336791"/>
-            <path fill="#FFFFFF" d="M64 28c-14 0-26 12-26 26s12 26 26 26 26-12 26-26-12-26-26-26zm0 44c-10 0-18-8-18-18s8-18 18-18 18 8 18 18-8 18-18 18z"/>
-          </svg>
-        );
-      case 'C':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#00599C"/>
-            <path fill="#FFFFFF" d="M64 32c-12 0-22 10-22 22s10 22 22 22 22-10 22-22-10-22-22-22zm0 36c-8 0-14-6-14-14s6-14 14-14 14 6 14 14-6 14-14 14z"/>
-          </svg>
-        );
-      case 'C++':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#00599C"/>
-            <path fill="#FFFFFF" d="M64 28c-14 0-26 12-26 26s12 26 26 26 26-12 26-26-12-26-26-26zm0 44c-10 0-18-8-18-18s8-18 18-18 18 8 18 18-8 18-18 18z"/>
-          </svg>
-        );
-      case 'C#':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#239120"/>
-            <path fill="#FFFFFF" d="M64 32c-12 0-22 10-22 22s10 22 22 22 22-10 22-22-10-22-22-22zm0 36c-8 0-14-6-14-14s6-14 14-14 14 6 14 14-6 14-14 14z"/>
-          </svg>
-        );
-      case 'R':
-        return (
-          <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden>
-            <rect width="128" height="128" rx="16" fill="#276DC3"/>
-            <path fill="#FFFFFF" d="M64 28c-14 0-26 12-26 26s12 26 26 26 26-12 26-26-12-26-26-26zm0 44c-10 0-18-8-18-18s8-18 18-18 18 8 18 18-8 18-18 18z"/>
-          </svg>
-        );
-      default:
-        // Generic initial-based icon
-        const initials = name
-          .replace('PostgreSQL', 'PG')
-          .replace('Google Colab', 'Colab')
-          .replace('R Studio', 'RStudio')
-          .split(' ')
-          .map(w => w[0])
-          .join('')
-          .slice(0, 3)
-          .toUpperCase();
-        return (
-          <svg viewBox="0 0 64 64" width="28" height="28" aria-hidden>
-            <rect x="2" y="2" width="60" height="60" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
-            <text x="50%" y="56%" dominantBaseline="middle" textAnchor="middle" fontFamily="system-ui, sans-serif" fontSize="20" fill="#2563eb">{initials}</text>
-          </svg>
-        );
-    }
-  };
-
-  return (
-    <div className="home">
-      <div className="hero">
-        <div className="hero__text">
-          <h1>
-            <span className="accent">Hi, I'm</span> {name}
-          </h1>
-          <h3 className="muted">{title}</h3>
-          <p style={{ textAlign: 'justify' }}>{summary}</p>
-          <div className="hero__cta">
-            <Link className="btn btn-primary" to="/contact">Contact Me</Link>
-          </div>
-          <div className="hero__icons" aria-label="Primary technologies">
-            {techs.map((t) => (
-              <div className="tech-icon" title={t} key={t}>
-                {renderIconSVG(t)}
-                <span>{t}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="hero__image">
-          <div className="profile">
-            <img src={hero.photoUrl} alt={`${name} profile picture`} />
-          </div>
-        </div>
+  const [active,setActive]=useState(0);
+  const [visible,setVisible]=useState(false);
+  useEffect(()=>{const t=requestAnimationFrame(()=>setVisible(true));return()=>cancelAnimationFrame(t)},[]);
+  const featured=data.projects.slice(0,4);
+  return <div className={'hx '+(visible?'hx-ready':'')}>
+    <section className="hx-hero" aria-labelledby="hx-title">
+      <div className="hx-hero-copy">
+        <div className="hx-eyebrow"><span className="hx-blink"/> OPEN TO BUILDING WHAT'S NEXT <span className="hx-eyebrow-line"/></div>
+        <p className="hx-index">PORTFOLIO / 2026 <span>001 — 004</span></p>
+        <h1 id="hx-title">Engineering<br/><span className="hx-outline">what's</span> <em>next.</em></h1>
+        <p className="hx-intro">I'm <strong>{data.name}</strong> — a software engineer working at the intersection of <span>artificial intelligence, product engineering, and real-world systems.</span></p>
+        <div className="hx-actions"><Link to="/projects" className="hx-primary">Explore my work <span>↗</span></Link><a href="#hx-about" className="hx-secondary">Discover more <span>↓</span></a></div>
+        <div className="hx-hero-bottom"><span>SCROLL TO EXPLORE</span><span className="hx-scroll-line"/></div>
       </div>
-      {/* Education Preview */}
-      <div className="section">
-        <div className="section__header">
-          <h2>Education</h2>
-          <p className="section__intro" style={{ textAlign: 'justify' }}>Degrees, GPA, and selected coursework.</p>
-        </div>
-        <div className="timeline">
-          {data.education.map((ed) => (
-            <div className="timeline__item" key={ed.school}>
-              <div className="timeline__heading">
-                <h3>{ed.degree}</h3>
-                <span className="muted">{ed.years}</span>
-              </div>
-              <div className="timeline__meta"><strong style={{ color: '#3b82f6' }}>{ed.school}</strong> · {ed.location}</div>
-              {ed.coursework && (
-                <div className="chips">
-                  {ed.coursework.slice(0, 6).map((c) => (
-                    <span className="chip" key={c}>{c}</span>
-                  ))}
-                  {ed.coursework.length > 6 && <span className="chip">+{ed.coursework.length - 6} more</span>}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="btn-group"><Link to="/education" className="btn">View all Education</Link></div>
-      </div>
+      <div className="hx-hero-visual"><SignalField/><div className="hx-visual-label"><span>FIG. 01</span> INTELLIGENCE IN MOTION</div></div>
+    </section>
 
-      {/* Experience Preview */}
-      <div className="section">
-        <div className="section__header">
-          <h2>Experience</h2>
-          <p className="section__intro" style={{ textAlign: 'justify' }}>Highlights from my professional journey.</p>
-        </div>
-        {data.experience.slice(0, 3).map((ex) => (
-          <div className="card" key={ex.company + ex.role}>
-            <div className="card__header">
-              <h3>{ex.company}</h3>
-              <span className="muted">{ex.location}</span>
-            </div>
-            <div className="card__subheader"><strong>{ex.role}</strong> · <span className="muted">{ex.period}</span></div>
-            <ul className="bullet-list">
-              {ex.points.slice(0, 3).map((p, idx) => (
-                <li key={idx}>{p}</li>
-              ))}
-            </ul>
-            {ex.stack && (
-              <div className="chips">
-                {ex.stack.map((s) => (
-                  <span className="chip" key={s}>{s}</span>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-        <div className="btn-group"><Link to="/experience" className="btn">View all Experience</Link></div>
-      </div>
+    <div className="hx-ticker" aria-label="Areas of expertise"><div>AI ENGINEERING <b>✳</b> FULL-STACK DEVELOPMENT <b>✳</b> MACHINE LEARNING <b>✳</b> INDUSTRIAL INTELLIGENCE <b>✳</b> HUMAN-CENTERED SOFTWARE <b>✳</b></div></div>
 
-      {/* Projects + Hackathons Preview */}
-      <div className="section">
-        <div className="section__header">
-          <h2>Projects</h2>
-          <p className="section__intro" style={{ textAlign: 'justify' }}>Selected personal and academic work.</p>
-        </div>
-        <div className="grid grid--spacious">
-          {data.projects.slice(0, 4).map((pr) => {
-            const isExpanded = expandedCards[pr.title];
-            const shouldTruncate = pr.summary.length > 150;
-            const displayText = shouldTruncate && !isExpanded ? truncateText(pr.summary) : pr.summary;
-            
-            return (
-              <div className="card project-card" key={pr.title}>
-                <div className="card__header">
-                  <h3>{pr.title}</h3>
-                  <span className="muted">{pr.period}</span>
-                </div>
-                <div className="card__content">
-                  <p style={{ textAlign: 'justify' }}>{displayText}</p>
-                  {shouldTruncate && (
-                    <button 
-                      className="read-more-btn"
-                      onClick={() => toggleExpanded(pr.title)}
-                    >
-                      {isExpanded ? 'Read less' : 'Read more...'}
-                    </button>
-                  )}
-                </div>
-                {pr.stack && (
-                  <div className="chips">
-                    {pr.stack.slice(0, 8).map((s) => (
-                      <span className="chip" key={s}>{s}</span>
-                    ))}
-                    {pr.stack.length > 8 && (
-                      <span className="chip muted">+{pr.stack.length - 8} more</span>
-                    )}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-        {data.hackathons && data.hackathons.length > 0 && (
-          <div className="section" style={{ marginTop: '1rem' }}>
-            <h3 className="muted" style={{ margin: '.4rem 0' }}>Hackathons</h3>
-            <div className="grid grid--spacious">
-              {data.hackathons.slice(0, 2).map((h) => {
-                const isExpanded = expandedCards[`hackathon-${h.title}`];
-                const shouldTruncate = h.summary && h.summary.length > 150;
-                const displayText = shouldTruncate && !isExpanded ? truncateText(h.summary) : h.summary;
-                
-                return (
-                  <div className="card project-card" key={h.title}>
-                    <div className="card__header">
-                      <h3>{h.title}</h3>
-                      <span className="muted">{h.period}</span>
-                    </div>
-                    {h.hackathon && <div className="card__subheader"><strong>{h.hackathon}</strong></div>}
-                    {h.summary && (
-                      <div className="card__content">
-                        <p>{displayText}</p>
-                        {shouldTruncate && (
-                          <button 
-                            className="read-more-btn"
-                            onClick={() => toggleExpanded(`hackathon-${h.title}`)}
-                          >
-                            {isExpanded ? 'Read less' : 'Read more...'}
-                          </button>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-        <div className="btn-group"><Link to="/projects" className="btn">View all Projects</Link></div>
-      </div>
+    <section className="hx-section hx-about" id="hx-about"><div className="hx-section-kicker"><span>01 / THE APPROACH</span><span>BEYOND THE CODE</span></div>
+      <div className="hx-about-layout"><h2>Curious by nature.<br/><em>Engineer</em> by craft.</h2><div><p>Great technology isn't just about what it can do. It's about what it makes possible.</p><p>My work spans production software, data-driven systems, and applied AI. I care about the details: reliable architecture, intuitive experiences, and technology that makes complex things feel simple.</p><Link to="/experience" className="hx-text-link">My journey <span>↗</span></Link></div></div>
+      <div className="hx-stats"><div><strong>AI + SWE</strong><span>THE INTERSECTION</span></div><div><strong>3</strong><span>FOCUS AREAS</span></div><div><strong>∞</strong><span>THINGS TO LEARN</span></div></div>
+    </section>
 
-      {/* Skills Preview */}
-      <div className="section">
-        <div className="section__header">
-          <h2>Skills</h2>
-          <p className="section__intro" style={{ textAlign: 'justify' }}>Core programming and tools I use.</p>
-        </div>
-        <div className="card">
-          <h3>Programming</h3>
-          <div className="chips">
-            {data.skills.programming.map((s) => (
-              <span className="chip" key={s}>{s}</span>
-            ))}
-          </div>
-        </div>
-        <div className="card" style={{ marginTop: '1rem' }}>
-          <h3>Tools</h3>
-          <div className="chips">
-            {data.skills.tools.map((t) => (
-              <span className="chip" key={t}>{t}</span>
-            ))}
-          </div>
-        </div>
-        <div className="btn-group"><Link to="/skills" className="btn">View Skills</Link></div>
-      </div>
+    <section className="hx-section hx-capabilities"><div className="hx-section-kicker"><span>02 / WHAT I DO</span><span>EXPLORE MY PRACTICE</span></div><div className="hx-section-heading"><h2>Where ideas<br/><em>become systems.</em></h2><p>Three disciplines, one approach: design thoughtfully, build rigorously, and keep experimenting.</p></div>
+      <div className="hx-cap-layout"><div className="hx-cap-tabs" role="tablist" aria-label="Engineering disciplines">{capabilities.map((c,i)=><button role="tab" aria-selected={active===i} key={c.code} onClick={()=>setActive(i)} className={active===i?'is-active':''}><span>{c.code}</span><strong>{c.title}</strong><span>↗</span></button>)}</div><div className="hx-cap-detail" role="tabpanel"><div className="hx-cap-symbol">✳</div><span>{capabilities[active].label} / {capabilities[active].code}</span><h3>{capabilities[active].title}</h3><p>{capabilities[active].detail}</p><div className="hx-tag-row">{capabilities[active].tags.map(t=><span key={t}>{t}</span>)}</div></div></div>
+    </section>
 
-      {/* Activities Preview */}
-      <div className="section">
-        <div className="section__header">
-          <h2>Activities & Leadership</h2>
-        </div>
-        <div className="grid grid--spacious">
-          {data.activities.slice(0, 3).map((a) => (
-            <div className="card" key={a.title}>
-              <div className="card__header">
-                <h3>{a.title}</h3>
-                <span className="muted">{a.period}</span>
-              </div>
-              <div className="muted">{a.organization} · {a.location}</div>
-              <ul className="bullet-list">
-                {a.points.slice(0, 2).map((p, idx) => (
-                  <li key={idx}>{p}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="btn-group"><Link to="/activities" className="btn">View Activities</Link></div>
-      </div>
+    <section className="hx-section hx-work"><div className="hx-section-kicker"><span>03 / SELECTED WORK</span><span>BUILT WITH PURPOSE</span></div><div className="hx-section-heading"><h2>Selected <em>projects.</em></h2><Link className="hx-text-link" to="/projects">All projects <span>↗</span></Link></div>
+      <div className="hx-projects">{featured.map((pr,i)=><article className="hx-project" key={pr.title}><div className={'hx-project-art hx-art-'+i}>{pr.image?<img src={import.meta.env.BASE_URL+'assets/projects/'+pr.image} alt="" loading="lazy"/>:<span>0{i+1}</span>}<span className="hx-project-count">PROJECT / 0{i+1}</span></div><div className="hx-project-info"><div className="hx-project-meta"><span>{pr.period}</span><span>{pr.stack?.slice(0,2).join(' / ')}</span></div><h3>{pr.title}</h3><p>{pr.summary}</p><div className="hx-project-foot"><div className="hx-tag-row">{pr.stack?.slice(0,3).map(s=><span key={s}>{s}</span>)}</div>{pr.links?.github?<a href={pr.links.github} target="_blank" rel="noopener noreferrer" aria-label={'View '+pr.title+' on GitHub'}>↗</a>:<Link to="/projects" aria-label="View projects">↗</Link>}</div></div></article>)}</div>
+    </section>
 
-      {/* Certifications Preview */}
-      <div className="section">
-        <div className="section__header">
-          <h2>Certifications</h2>
-        </div>
-        <div className="grid">
-          {data.certifications && data.certifications.slice(0, 4).map((c) => (
-            <div className="card" key={c.title}>
-              <div className="card__header">
-                <h3>{c.title}</h3>
-              </div>
-              <p className="muted">PDF available</p>
-            </div>
-          ))}
-        </div>
-        <div className="btn-group"><Link to="/certifications" className="btn">View all Certifications</Link></div>
-      </div>
-    </div>
-  );
+    <section className="hx-section hx-experience"><div className="hx-section-kicker"><span>04 / EXPERIENCE</span><span>THE PATH SO FAR</span></div><div className="hx-section-heading"><h2>Built through <em>experience.</em></h2><Link className="hx-text-link" to="/experience">Full timeline <span>↗</span></Link></div><div className="hx-exp-list">{data.experience.slice(0,3).map((ex,i)=><div key={ex.company+ex.role} className="hx-exp-row"><span>0{i+1}</span><div><h3>{ex.company}</h3><p>{ex.role}</p></div><span>{ex.period}</span><span>↗</span></div>)}</div></section>
+
+    <section className="hx-contact"><span>HAVE SOMETHING IN MIND?</span><h2>Let's build something<br/><em>remarkable.</em></h2><a href={'mailto:'+data.contact.email}>Start a conversation <span>↗</span></a><div className="hx-contact-foot"><span>{data.name.toUpperCase()} / 2026</span><div><a href={data.contact.links.github} target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href={data.contact.links.linkedin} target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a></div></div></section>
+  </div>;
 }
